@@ -1,0 +1,17 @@
+[project]
+name = "radar-licitacoes-ingestao"
+version = "0.1.0"
+description = "Ingestão e análise de contratações públicas do PNCP"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28",
+    "psycopg[binary]>=3.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["testes"]

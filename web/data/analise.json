@@ -1,0 +1,6279 @@
+{
+  "metodologia": "Comparação entre itens com a mesma descrição normalizada (caixa alta, sem acento e sem pontuação) e a mesma unidade de medida canônica. Considera apenas o valor unitário homologado — o preço efetivamente adjudicado — de itens não cancelados com resultado publicado. Observações fora da cerca de Tukey (1,5 × intervalo interquartil) são descartadas das estatísticas e reportadas à parte, porque nesta base elas indicam divergência de especificação com muito mais frequência do que divergência de preço. A referência é a mediana; a dispersão é medida pelo coeficiente quartílico (IQR dividido pela mediana), resistente a valores atípicos. As observações são agregadas por órgão antes da comparação, para que um órgão com muitas compras não domine a estatística. Um valor acima da mediana não indica irregularidade: pode refletir urgência, quantidade, especificação técnica ou logística não capturadas pela descrição.",
+  "limitacao": "LIMITAÇÃO IMPORTANTE: o PNCP não publica especificação técnica do item. Os campos que a conteriam (informacaoComplementar, ncmNbsCodigo, catalogoCodigoItem) vieram vazios em 100% dos itens coletados. A descrição disponível é um rótulo de catálogo, não uma especificação: 'Monitor computador' abrange tanto um monitor de escritório quanto um painel profissional de grande porte. Portanto esta comparação mede a faixa de preço praticada dentro de uma categoria de catálogo — não o preço de um produto idêntico. Diferenças de preço podem refletir produtos genuinamente diferentes.",
+  "criterios": {
+    "min_orgaos": 3,
+    "min_observacoes": 5,
+    "fator_cerca": 1.5,
+    "limite_dispersao": 2.0,
+    "apenas_materiais": true
+  },
+  "gerado_em": "2026-08-14T15:45:14+00:00",
+  "itens": [
+    {
+      "chave_item": "SWITCH|UNIDADE",
+      "descricao": "SWITCH",
+      "descricao_exemplo": "Switch",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 55,
+      "observacoes_brutas": 60,
+      "orgaos": 21,
+      "preco_mediano": 67432.0,
+      "preco_minimo": 210.0,
+      "preco_maximo": 279000.0,
+      "q1": 13500.0,
+      "q3": 121499.75,
+      "dispersao": 1.853,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 331812.0,
+          "quantidade": 4.0,
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "descricao_original": "Switch"
+        },
+        {
+          "valor_unitario": 334000.0,
+          "quantidade": 4.0,
+          "orgao_nome": "MINISTERIO DA CULTURA",
+          "descricao_original": "Switch"
+        },
+        {
+          "valor_unitario": 361400.0,
+          "quantidade": 2.0,
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "descricao_original": "Switch"
+        },
+        {
+          "valor_unitario": 367600.0,
+          "quantidade": 2.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "descricao_original": "Switch"
+        },
+        {
+          "valor_unitario": 1556127.0,
+          "quantidade": 2.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "descricao_original": "Switch"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 263352.0,
+          "razao_vs_mediana": 3.905,
+          "desvio_percentual": 290.5
+        },
+        {
+          "orgao_cnpj": "26664015000148",
+          "orgao_nome": "CONTROLADORIA-GERAL DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 182720.0,
+          "razao_vs_mediana": 2.71,
+          "desvio_percentual": 171.0
+        },
+        {
+          "orgao_cnpj": "32901688000177",
+          "orgao_nome": "FUNDACAO CULTURAL PALMARES",
+          "compras": 1,
+          "preco_mediano": 141700.0,
+          "razao_vs_mediana": 2.101,
+          "desvio_percentual": 110.1
+        },
+        {
+          "orgao_cnpj": "01264142000129",
+          "orgao_nome": "MINISTERIO DA CULTURA",
+          "compras": 5,
+          "preco_mediano": 127991.0,
+          "razao_vs_mediana": 1.898,
+          "desvio_percentual": 89.8
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 2,
+          "preco_mediano": 109950.0,
+          "razao_vs_mediana": 1.631,
+          "desvio_percentual": 63.1
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 2,
+          "preco_mediano": 94680.83,
+          "razao_vs_mediana": 1.404,
+          "desvio_percentual": 40.4
+        },
+        {
+          "orgao_cnpj": "00394536000139",
+          "orgao_nome": "MINISTERIO DAS RELACOES EXTERIORES",
+          "compras": 5,
+          "preco_mediano": 92410.0,
+          "razao_vs_mediana": 1.37,
+          "desvio_percentual": 37.0
+        },
+        {
+          "orgao_cnpj": "00394445000101",
+          "orgao_nome": "MINISTERIO DA EDUCACAO",
+          "compras": 3,
+          "preco_mediano": 86415.0,
+          "razao_vs_mediana": 1.282,
+          "desvio_percentual": 28.2
+        },
+        {
+          "orgao_cnpj": "37753638000103",
+          "orgao_nome": "MINISTERIO DAS COMUNICACOES",
+          "compras": 2,
+          "preco_mediano": 77494.75,
+          "razao_vs_mediana": 1.149,
+          "desvio_percentual": 14.9
+        },
+        {
+          "orgao_cnpj": "00414607000118",
+          "orgao_nome": "TRIBUNAL DE CONTAS DA UNIAO",
+          "compras": 4,
+          "preco_mediano": 68756.0,
+          "razao_vs_mediana": 1.02,
+          "desvio_percentual": 2.0
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 64000.0,
+          "razao_vs_mediana": 0.949,
+          "desvio_percentual": -5.1
+        },
+        {
+          "orgao_cnpj": "08829974000194",
+          "orgao_nome": "INSTITUTO CHICO MENDES DE CONSERVACAO DA BIODIVERSIDADE",
+          "compras": 1,
+          "preco_mediano": 60176.34,
+          "razao_vs_mediana": 0.892,
+          "desvio_percentual": -10.8
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 54988.0,
+          "razao_vs_mediana": 0.815,
+          "desvio_percentual": -18.5
+        },
+        {
+          "orgao_cnpj": "07290290000102",
+          "orgao_nome": "SUPERINTENDENCIA NACIONAL DE PREVIDENCIA COMPLEMENTAR",
+          "compras": 4,
+          "preco_mediano": 34250.0,
+          "razao_vs_mediana": 0.508,
+          "desvio_percentual": -49.2
+        },
+        {
+          "orgao_cnpj": "03658507000125",
+          "orgao_nome": "TRIBUNAL REGIONAL FEDERAL DA 1 REGIAO",
+          "compras": 6,
+          "preco_mediano": 23600.0,
+          "razao_vs_mediana": 0.35,
+          "desvio_percentual": -65.0
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 7,
+          "preco_mediano": 14000.0,
+          "razao_vs_mediana": 0.208,
+          "desvio_percentual": -79.2
+        },
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 1,
+          "preco_mediano": 10499.0,
+          "razao_vs_mediana": 0.156,
+          "desvio_percentual": -84.4
+        },
+        {
+          "orgao_cnpj": "04903587000108",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES AQUAVIARIOS",
+          "compras": 1,
+          "preco_mediano": 2998.0,
+          "razao_vs_mediana": 0.044,
+          "desvio_percentual": -95.6
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 2878.0,
+          "razao_vs_mediana": 0.043,
+          "desvio_percentual": -95.7
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 1538.6,
+          "razao_vs_mediana": 0.023,
+          "desvio_percentual": -97.7
+        },
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 2,
+          "preco_mediano": 210.0,
+          "razao_vs_mediana": 0.003,
+          "desvio_percentual": -99.7
+        }
+      ]
+    },
+    {
+      "chave_item": "TELEVISOR|UNIDADE",
+      "descricao": "TELEVISOR",
+      "descricao_exemplo": "Televisor",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 23,
+      "observacoes_brutas": 26,
+      "orgaos": 14,
+      "preco_mediano": 2401.0,
+      "preco_minimo": 1360.0,
+      "preco_maximo": 4976.16,
+      "q1": 2004.88,
+      "q3": 3089.6,
+      "dispersao": 0.778,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 10199.99,
+          "quantidade": 2.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR ELEITORAL",
+          "descricao_original": "Televisor"
+        },
+        {
+          "valor_unitario": 23564.0,
+          "quantidade": 4.0,
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "descricao_original": "Televisor"
+        },
+        {
+          "valor_unitario": 30000.0,
+          "quantidade": 2.0,
+          "orgao_nome": "SENADO FEDERAL",
+          "descricao_original": "Televisor"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "86900545000170",
+          "orgao_nome": "AGENCIA ESPACIAL BRASILEIRA - AEB",
+          "compras": 1,
+          "preco_mediano": 4189.38,
+          "razao_vs_mediana": 1.745,
+          "desvio_percentual": 74.5
+        },
+        {
+          "orgao_cnpj": "07290290000102",
+          "orgao_nome": "SUPERINTENDENCIA NACIONAL DE PREVIDENCIA COMPLEMENTAR",
+          "compras": 1,
+          "preco_mediano": 3974.0,
+          "razao_vs_mediana": 1.655,
+          "desvio_percentual": 65.5
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 3354.09,
+          "razao_vs_mediana": 1.397,
+          "desvio_percentual": 39.7
+        },
+        {
+          "orgao_cnpj": "00627612000109",
+          "orgao_nome": "FUNDACAO ESCOLA NACIONAL DE ADMINISTRACAO PUBLICA",
+          "compras": 1,
+          "preco_mediano": 3069.08,
+          "razao_vs_mediana": 1.278,
+          "desvio_percentual": 27.8
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 2932.91,
+          "razao_vs_mediana": 1.222,
+          "desvio_percentual": 22.2
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 2793.81,
+          "razao_vs_mediana": 1.164,
+          "desvio_percentual": 16.4
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 4,
+          "preco_mediano": 2614.58,
+          "razao_vs_mediana": 1.089,
+          "desvio_percentual": 8.9
+        },
+        {
+          "orgao_cnpj": "33839275000172",
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "compras": 1,
+          "preco_mediano": 2439.0,
+          "razao_vs_mediana": 1.016,
+          "desvio_percentual": 1.6
+        },
+        {
+          "orgao_cnpj": "00509018000113",
+          "orgao_nome": "TRIBUNAL SUPERIOR ELEITORAL",
+          "compras": 1,
+          "preco_mediano": 2401.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 2400.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": -0.0
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 2114.0,
+          "razao_vs_mediana": 0.88,
+          "desvio_percentual": -12.0
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 2100.0,
+          "razao_vs_mediana": 0.875,
+          "desvio_percentual": -12.5
+        },
+        {
+          "orgao_cnpj": "01263896000164",
+          "orgao_nome": "MINISTERIO DA CIENCIA, TECNOLOGIA E INOVACOES",
+          "compras": 2,
+          "preco_mediano": 1737.17,
+          "razao_vs_mediana": 0.724,
+          "desvio_percentual": -27.6
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 2,
+          "preco_mediano": 1685.0,
+          "razao_vs_mediana": 0.702,
+          "desvio_percentual": -29.8
+        }
+      ]
+    },
+    {
+      "chave_item": "FORNO MICROONDAS|UNIDADE",
+      "descricao": "FORNO MICROONDAS",
+      "descricao_exemplo": "Forno microondas",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 15,
+      "observacoes_brutas": 18,
+      "orgaos": 14,
+      "preco_mediano": 649.5,
+      "preco_minimo": 593.0,
+      "preco_maximo": 742.0,
+      "q1": 619.24,
+      "q3": 667.5,
+      "dispersao": 0.081,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 519.0,
+          "quantidade": 41.0,
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "descricao_original": "Forno microondas"
+        },
+        {
+          "valor_unitario": 4323.27,
+          "quantidade": 8.0,
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "descricao_original": "Forno microondas"
+        },
+        {
+          "valor_unitario": 5990.0,
+          "quantidade": 6.0,
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "descricao_original": "Forno microondas"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00038166000105",
+          "orgao_nome": "BANCO CENTRAL DO BRASIL",
+          "compras": 1,
+          "preco_mediano": 742.0,
+          "razao_vs_mediana": 1.142,
+          "desvio_percentual": 14.2
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 673.92,
+          "razao_vs_mediana": 1.038,
+          "desvio_percentual": 3.8
+        },
+        {
+          "orgao_cnpj": "00509018000113",
+          "orgao_nome": "TRIBUNAL SUPERIOR ELEITORAL",
+          "compras": 1,
+          "preco_mediano": 672.0,
+          "razao_vs_mediana": 1.035,
+          "desvio_percentual": 3.5
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 1,
+          "preco_mediano": 669.99,
+          "razao_vs_mediana": 1.032,
+          "desvio_percentual": 3.2
+        },
+        {
+          "orgao_cnpj": "00627612000109",
+          "orgao_nome": "FUNDACAO ESCOLA NACIONAL DE ADMINISTRACAO PUBLICA",
+          "compras": 1,
+          "preco_mediano": 665.0,
+          "razao_vs_mediana": 1.024,
+          "desvio_percentual": 2.4
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 660.0,
+          "razao_vs_mediana": 1.016,
+          "desvio_percentual": 1.6
+        },
+        {
+          "orgao_cnpj": "02270669000129",
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "compras": 1,
+          "preco_mediano": 657.0,
+          "razao_vs_mediana": 1.012,
+          "desvio_percentual": 1.2
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 649.5,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "01263896000164",
+          "orgao_nome": "MINISTERIO DA CIENCIA, TECNOLOGIA E INOVACOES",
+          "compras": 1,
+          "preco_mediano": 649.5,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 628.0,
+          "razao_vs_mediana": 0.967,
+          "desvio_percentual": -3.3
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 620.0,
+          "razao_vs_mediana": 0.955,
+          "desvio_percentual": -4.5
+        },
+        {
+          "orgao_cnpj": "33654831000136",
+          "orgao_nome": "CONSELHO NACIONAL DE DESENVOLVIMENTO CIENTIFICO E TECNOLOGICO-CNPQ",
+          "compras": 1,
+          "preco_mediano": 615.0,
+          "razao_vs_mediana": 0.947,
+          "desvio_percentual": -5.3
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 613.24,
+          "razao_vs_mediana": 0.944,
+          "desvio_percentual": -5.6
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 593.0,
+          "razao_vs_mediana": 0.913,
+          "desvio_percentual": -8.7
+        }
+      ]
+    },
+    {
+      "chave_item": "CADEIRA ESCRITORIO|UNIDADE",
+      "descricao": "CADEIRA ESCRITORIO",
+      "descricao_exemplo": "Cadeira escritório",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 34,
+      "observacoes_brutas": 37,
+      "orgaos": 12,
+      "preco_mediano": 1027.0,
+      "preco_minimo": 250.0,
+      "preco_maximo": 2850.0,
+      "q1": 758.83,
+      "q3": 1431.83,
+      "dispersao": 0.863,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 5494.0,
+          "quantidade": 10.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "descricao_original": "Cadeira escritório"
+        },
+        {
+          "valor_unitario": 5638.0,
+          "quantidade": 577.0,
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "descricao_original": "Cadeira escritório"
+        },
+        {
+          "valor_unitario": 12995.0,
+          "quantidade": 10.0,
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "descricao_original": "Cadeira Escritório"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 2326.6,
+          "razao_vs_mediana": 2.265,
+          "desvio_percentual": 126.5
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 2,
+          "preco_mediano": 2017.8,
+          "razao_vs_mediana": 1.965,
+          "desvio_percentual": 96.5
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 3,
+          "preco_mediano": 1858.99,
+          "razao_vs_mediana": 1.81,
+          "desvio_percentual": 81.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 1550.0,
+          "razao_vs_mediana": 1.509,
+          "desvio_percentual": 50.9
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 2,
+          "preco_mediano": 1320.0,
+          "razao_vs_mediana": 1.285,
+          "desvio_percentual": 28.5
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 1196.0,
+          "razao_vs_mediana": 1.165,
+          "desvio_percentual": 16.5
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 3,
+          "preco_mediano": 1136.05,
+          "razao_vs_mediana": 1.106,
+          "desvio_percentual": 10.6
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 2,
+          "preco_mediano": 1009.15,
+          "razao_vs_mediana": 0.983,
+          "desvio_percentual": -1.7
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 4,
+          "preco_mediano": 998.24,
+          "razao_vs_mediana": 0.972,
+          "desvio_percentual": -2.8
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 5,
+          "preco_mediano": 925.38,
+          "razao_vs_mediana": 0.901,
+          "desvio_percentual": -9.9
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 6,
+          "preco_mediano": 707.0,
+          "razao_vs_mediana": 0.688,
+          "desvio_percentual": -31.2
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 615.0,
+          "razao_vs_mediana": 0.599,
+          "desvio_percentual": -40.1
+        }
+      ]
+    },
+    {
+      "chave_item": "APARELHO AR CONDICIONADO|UNIDADE",
+      "descricao": "APARELHO AR CONDICIONADO",
+      "descricao_exemplo": "Aparelho ar condicionado",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 62,
+      "observacoes_brutas": 62,
+      "orgaos": 11,
+      "preco_mediano": 3599.5,
+      "preco_minimo": 1636.83,
+      "preco_maximo": 10890.0,
+      "q1": 2641.55,
+      "q3": 6157.5,
+      "dispersao": 0.977,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 2,
+          "preco_mediano": 10019.0,
+          "razao_vs_mediana": 2.783,
+          "desvio_percentual": 178.3
+        },
+        {
+          "orgao_cnpj": "03658507000125",
+          "orgao_nome": "TRIBUNAL REGIONAL FEDERAL DA 1 REGIAO",
+          "compras": 7,
+          "preco_mediano": 7978.8,
+          "razao_vs_mediana": 2.217,
+          "desvio_percentual": 121.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 6,
+          "preco_mediano": 5176.82,
+          "razao_vs_mediana": 1.438,
+          "desvio_percentual": 43.8
+        },
+        {
+          "orgao_cnpj": "33683111000107",
+          "orgao_nome": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+          "compras": 10,
+          "preco_mediano": 4747.5,
+          "razao_vs_mediana": 1.319,
+          "desvio_percentual": 31.9
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 9,
+          "preco_mediano": 3599.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": -0.0
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 6,
+          "preco_mediano": 3550.0,
+          "razao_vs_mediana": 0.986,
+          "desvio_percentual": -1.4
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 3,
+          "preco_mediano": 3400.0,
+          "razao_vs_mediana": 0.945,
+          "desvio_percentual": -5.5
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 8,
+          "preco_mediano": 3220.0,
+          "razao_vs_mediana": 0.895,
+          "desvio_percentual": -10.5
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 4,
+          "preco_mediano": 2812.61,
+          "razao_vs_mediana": 0.781,
+          "desvio_percentual": -21.9
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 4,
+          "preco_mediano": 2742.5,
+          "razao_vs_mediana": 0.762,
+          "desvio_percentual": -23.8
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 3,
+          "preco_mediano": 2621.01,
+          "razao_vs_mediana": 0.728,
+          "desvio_percentual": -27.2
+        }
+      ]
+    },
+    {
+      "chave_item": "SOFA|UNIDADE",
+      "descricao": "SOFA",
+      "descricao_exemplo": "Sofá",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 37,
+      "observacoes_brutas": 39,
+      "orgaos": 11,
+      "preco_mediano": 2560.0,
+      "preco_minimo": 800.0,
+      "preco_maximo": 5900.0,
+      "q1": 1780.0,
+      "q3": 3950.0,
+      "dispersao": 0.859,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 9000.0,
+          "quantidade": 2.0,
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "descricao_original": "Sofá"
+        },
+        {
+          "valor_unitario": 10644.0,
+          "quantidade": 2.0,
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "descricao_original": "Sofá"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 5374.72,
+          "razao_vs_mediana": 2.099,
+          "desvio_percentual": 109.9
+        },
+        {
+          "orgao_cnpj": "00531640000128",
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "compras": 3,
+          "preco_mediano": 3980.0,
+          "razao_vs_mediana": 1.555,
+          "desvio_percentual": 55.5
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 3800.0,
+          "razao_vs_mediana": 1.484,
+          "desvio_percentual": 48.4
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 7,
+          "preco_mediano": 3500.0,
+          "razao_vs_mediana": 1.367,
+          "desvio_percentual": 36.7
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 3,
+          "preco_mediano": 3500.0,
+          "razao_vs_mediana": 1.367,
+          "desvio_percentual": 36.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 3,
+          "preco_mediano": 2790.0,
+          "razao_vs_mediana": 1.09,
+          "desvio_percentual": 9.0
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 5,
+          "preco_mediano": 2705.81,
+          "razao_vs_mediana": 1.057,
+          "desvio_percentual": 5.7
+        },
+        {
+          "orgao_cnpj": "00414607000118",
+          "orgao_nome": "TRIBUNAL DE CONTAS DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 2042.69,
+          "razao_vs_mediana": 0.798,
+          "desvio_percentual": -20.2
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 3,
+          "preco_mediano": 1713.0,
+          "razao_vs_mediana": 0.669,
+          "desvio_percentual": -33.1
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 6,
+          "preco_mediano": 1400.0,
+          "razao_vs_mediana": 0.547,
+          "desvio_percentual": -45.3
+        },
+        {
+          "orgao_cnpj": "26963645000113",
+          "orgao_nome": "CAMARA LEGISLATIVA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 1150.0,
+          "razao_vs_mediana": 0.449,
+          "desvio_percentual": -55.1
+        }
+      ]
+    },
+    {
+      "chave_item": "MICROCOMPUTADOR|UNIDADE",
+      "descricao": "MICROCOMPUTADOR",
+      "descricao_exemplo": "Microcomputador",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 17,
+      "observacoes_brutas": 21,
+      "orgaos": 11,
+      "preco_mediano": 4300.0,
+      "preco_minimo": 1838.62,
+      "preco_maximo": 6410.0,
+      "q1": 3701.0,
+      "q3": 6040.66,
+      "dispersao": 0.561,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 11900.0,
+          "quantidade": 2.0,
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "descricao_original": "Microcomputador"
+        },
+        {
+          "valor_unitario": 14199.0,
+          "quantidade": 21.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR ELEITORAL",
+          "descricao_original": "Microcomputador"
+        },
+        {
+          "valor_unitario": 41200.0,
+          "quantidade": 146.0,
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "descricao_original": "Microcomputador"
+        },
+        {
+          "valor_unitario": 108828.0,
+          "quantidade": 1.0,
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "descricao_original": "Microcomputador"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "30871497000184",
+          "orgao_nome": "CONSELHO FEDERAL DOS TECNICOS INDUSTRIAIS",
+          "compras": 1,
+          "preco_mediano": 6351.31,
+          "razao_vs_mediana": 1.477,
+          "desvio_percentual": 47.7
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 6200.0,
+          "razao_vs_mediana": 1.442,
+          "desvio_percentual": 44.2
+        },
+        {
+          "orgao_cnpj": "60984473000100",
+          "orgao_nome": "CONSELHO FEDERAL DE FARMACIA",
+          "compras": 1,
+          "preco_mediano": 6040.66,
+          "razao_vs_mediana": 1.405,
+          "desvio_percentual": 40.5
+        },
+        {
+          "orgao_cnpj": "00697722000147",
+          "orgao_nome": "CONSELHO FEDERAL DE FONOAUDIOLOGIA",
+          "compras": 1,
+          "preco_mediano": 5420.0,
+          "razao_vs_mediana": 1.26,
+          "desvio_percentual": 26.0
+        },
+        {
+          "orgao_cnpj": "26963645000113",
+          "orgao_nome": "CAMARA LEGISLATIVA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 5355.0,
+          "razao_vs_mediana": 1.245,
+          "desvio_percentual": 24.5
+        },
+        {
+          "orgao_cnpj": "00489828000155",
+          "orgao_nome": "MINISTERIO DA GESTAO E DA INOVACAO EM SERVICOS PUBLICOS",
+          "compras": 2,
+          "preco_mediano": 4314.0,
+          "razao_vs_mediana": 1.003,
+          "desvio_percentual": 0.3
+        },
+        {
+          "orgao_cnpj": "00531640000128",
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "compras": 2,
+          "preco_mediano": 4019.5,
+          "razao_vs_mediana": 0.935,
+          "desvio_percentual": -6.5
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 3701.0,
+          "razao_vs_mediana": 0.861,
+          "desvio_percentual": -13.9
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 3643.0,
+          "razao_vs_mediana": 0.847,
+          "desvio_percentual": -15.3
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 3475.0,
+          "razao_vs_mediana": 0.808,
+          "desvio_percentual": -19.2
+        },
+        {
+          "orgao_cnpj": "01264266000104",
+          "orgao_nome": "CONSELHO REGIONAL DE ADMINISTRACAO DO DF",
+          "compras": 1,
+          "preco_mediano": 1838.62,
+          "razao_vs_mediana": 0.428,
+          "desvio_percentual": -57.2
+        }
+      ]
+    },
+    {
+      "chave_item": "FRIGOBAR|UNIDADE",
+      "descricao": "FRIGOBAR",
+      "descricao_exemplo": "Frigobar",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 13,
+      "observacoes_brutas": 13,
+      "orgaos": 11,
+      "preco_mediano": 1231.97,
+      "preco_minimo": 1112.5,
+      "preco_maximo": 1357.79,
+      "q1": 1154.21,
+      "q3": 1295.98,
+      "dispersao": 0.115,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 2,
+          "preco_mediano": 1350.14,
+          "razao_vs_mediana": 1.096,
+          "desvio_percentual": 9.6
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 1297.77,
+          "razao_vs_mediana": 1.053,
+          "desvio_percentual": 5.3
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 1295.98,
+          "razao_vs_mediana": 1.052,
+          "desvio_percentual": 5.2
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 1,
+          "preco_mediano": 1251.28,
+          "razao_vs_mediana": 1.016,
+          "desvio_percentual": 1.6
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 1237.12,
+          "razao_vs_mediana": 1.004,
+          "desvio_percentual": 0.4
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 1231.97,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00509018000113",
+          "orgao_nome": "TRIBUNAL SUPERIOR ELEITORAL",
+          "compras": 1,
+          "preco_mediano": 1200.0,
+          "razao_vs_mediana": 0.974,
+          "desvio_percentual": -2.6
+        },
+        {
+          "orgao_cnpj": "00038166000105",
+          "orgao_nome": "BANCO CENTRAL DO BRASIL",
+          "compras": 1,
+          "preco_mediano": 1175.0,
+          "razao_vs_mediana": 0.954,
+          "desvio_percentual": -4.6
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 1154.21,
+          "razao_vs_mediana": 0.937,
+          "desvio_percentual": -6.3
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 1153.0,
+          "razao_vs_mediana": 0.936,
+          "desvio_percentual": -6.4
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 2,
+          "preco_mediano": 1112.5,
+          "razao_vs_mediana": 0.903,
+          "desvio_percentual": -9.7
+        }
+      ]
+    },
+    {
+      "chave_item": "OLEO DIESEL|LITRO",
+      "descricao": "OLEO DIESEL",
+      "descricao_exemplo": "Óleo Diesel",
+      "unidade": "LITRO",
+      "material_ou_servico": "M",
+      "observacoes": 16,
+      "observacoes_brutas": 18,
+      "orgaos": 10,
+      "preco_mediano": 5.61,
+      "preco_minimo": 4.56,
+      "preco_maximo": 6.41,
+      "q1": 4.79,
+      "q3": 5.9,
+      "dispersao": 0.221,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 12.02,
+          "quantidade": 2500.0,
+          "orgao_nome": "FUNDACAO ESCOLA NACIONAL DE ADMINISTRACAO PUBLICA",
+          "descricao_original": "Óleo Diesel"
+        },
+        {
+          "valor_unitario": 984816.0,
+          "quantidade": 1.0,
+          "orgao_nome": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+          "descricao_original": "Óleo diesel"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00489828000155",
+          "orgao_nome": "MINISTERIO DA GESTAO E DA INOVACAO EM SERVICOS PUBLICOS",
+          "compras": 1,
+          "preco_mediano": 6.41,
+          "razao_vs_mediana": 1.142,
+          "desvio_percentual": 14.2
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 6.03,
+          "razao_vs_mediana": 1.075,
+          "desvio_percentual": 7.5
+        },
+        {
+          "orgao_cnpj": "37115383000153",
+          "orgao_nome": "MINISTERIO DE MINAS E ENERGIA",
+          "compras": 1,
+          "preco_mediano": 5.88,
+          "razao_vs_mediana": 1.048,
+          "desvio_percentual": 4.8
+        },
+        {
+          "orgao_cnpj": "23612685000122",
+          "orgao_nome": "MINISTERIO DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 5.85,
+          "razao_vs_mediana": 1.042,
+          "desvio_percentual": 4.2
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 5.76,
+          "razao_vs_mediana": 1.026,
+          "desvio_percentual": 2.6
+        },
+        {
+          "orgao_cnpj": "26994558000123",
+          "orgao_nome": "ADVOCACIA GERAL DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 5.67,
+          "razao_vs_mediana": 1.011,
+          "desvio_percentual": 1.1
+        },
+        {
+          "orgao_cnpj": "07421906000129",
+          "orgao_nome": "CONSELHO NACIONAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 5.55,
+          "razao_vs_mediana": 0.989,
+          "desvio_percentual": -1.1
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 2,
+          "preco_mediano": 4.84,
+          "razao_vs_mediana": 0.862,
+          "desvio_percentual": -13.8
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 4,
+          "preco_mediano": 4.83,
+          "razao_vs_mediana": 0.86,
+          "desvio_percentual": -14.0
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 4.62,
+          "razao_vs_mediana": 0.823,
+          "desvio_percentual": -17.7
+        }
+      ]
+    },
+    {
+      "chave_item": "NOTEBOOK|UNIDADE",
+      "descricao": "NOTEBOOK",
+      "descricao_exemplo": "Notebook",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 13,
+      "observacoes_brutas": 16,
+      "orgaos": 10,
+      "preco_mediano": 5450.0,
+      "preco_minimo": 2214.92,
+      "preco_maximo": 7900.0,
+      "q1": 4872.0,
+      "q3": 6750.0,
+      "dispersao": 0.556,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 14199.0,
+          "quantidade": 1.0,
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "descricao_original": "Notebook"
+        },
+        {
+          "valor_unitario": 18900.0,
+          "quantidade": 2.0,
+          "orgao_nome": "CONSELHO FEDERAL DE FARMACIA",
+          "descricao_original": "Notebook"
+        },
+        {
+          "valor_unitario": 22700.0,
+          "quantidade": 550.0,
+          "orgao_nome": "MINISTERIO DA FAZENDA",
+          "descricao_original": "Notebook"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 7900.0,
+          "razao_vs_mediana": 1.45,
+          "desvio_percentual": 45.0
+        },
+        {
+          "orgao_cnpj": "33839275000172",
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "compras": 2,
+          "preco_mediano": 7000.0,
+          "razao_vs_mediana": 1.284,
+          "desvio_percentual": 28.4
+        },
+        {
+          "orgao_cnpj": "26963645000113",
+          "orgao_nome": "CAMARA LEGISLATIVA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 6650.0,
+          "razao_vs_mediana": 1.22,
+          "desvio_percentual": 22.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 5500.0,
+          "razao_vs_mediana": 1.009,
+          "desvio_percentual": 0.9
+        },
+        {
+          "orgao_cnpj": "00394460000141",
+          "orgao_nome": "MINISTERIO DA FAZENDA",
+          "compras": 1,
+          "preco_mediano": 5450.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 5000.0,
+          "razao_vs_mediana": 0.917,
+          "desvio_percentual": -8.3
+        },
+        {
+          "orgao_cnpj": "00489828000155",
+          "orgao_nome": "MINISTERIO DA GESTAO E DA INOVACAO EM SERVICOS PUBLICOS",
+          "compras": 2,
+          "preco_mediano": 4872.0,
+          "razao_vs_mediana": 0.894,
+          "desvio_percentual": -10.6
+        },
+        {
+          "orgao_cnpj": "00697722000147",
+          "orgao_nome": "CONSELHO FEDERAL DE FONOAUDIOLOGIA",
+          "compras": 1,
+          "preco_mediano": 3790.0,
+          "razao_vs_mediana": 0.695,
+          "desvio_percentual": -30.5
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 1,
+          "preco_mediano": 3131.08,
+          "razao_vs_mediana": 0.575,
+          "desvio_percentual": -42.5
+        },
+        {
+          "orgao_cnpj": "01264266000104",
+          "orgao_nome": "CONSELHO REGIONAL DE ADMINISTRACAO DO DF",
+          "compras": 1,
+          "preco_mediano": 2214.92,
+          "razao_vs_mediana": 0.406,
+          "desvio_percentual": -59.4
+        }
+      ]
+    },
+    {
+      "chave_item": "GASOLINA|LITRO",
+      "descricao": "GASOLINA",
+      "descricao_exemplo": "Gasolina",
+      "unidade": "LITRO",
+      "material_ou_servico": "M",
+      "observacoes": 12,
+      "observacoes_brutas": 13,
+      "orgaos": 9,
+      "preco_mediano": 5.48,
+      "preco_minimo": 5.0,
+      "preco_maximo": 5.68,
+      "q1": 5.15,
+      "q3": 5.58,
+      "dispersao": 0.08,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 10.71,
+          "quantidade": 3500.0,
+          "orgao_nome": "FUNDACAO ESCOLA NACIONAL DE ADMINISTRACAO PUBLICA",
+          "descricao_original": "Gasolina"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 5.68,
+          "razao_vs_mediana": 1.036,
+          "desvio_percentual": 3.6
+        },
+        {
+          "orgao_cnpj": "23612685000122",
+          "orgao_nome": "MINISTERIO DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 5.61,
+          "razao_vs_mediana": 1.023,
+          "desvio_percentual": 2.3
+        },
+        {
+          "orgao_cnpj": "00489828000155",
+          "orgao_nome": "MINISTERIO DA GESTAO E DA INOVACAO EM SERVICOS PUBLICOS",
+          "compras": 1,
+          "preco_mediano": 5.57,
+          "razao_vs_mediana": 1.016,
+          "desvio_percentual": 1.6
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 1,
+          "preco_mediano": 5.5,
+          "razao_vs_mediana": 1.003,
+          "desvio_percentual": 0.3
+        },
+        {
+          "orgao_cnpj": "37115383000153",
+          "orgao_nome": "MINISTERIO DE MINAS E ENERGIA",
+          "compras": 1,
+          "preco_mediano": 5.46,
+          "razao_vs_mediana": 0.997,
+          "desvio_percentual": -0.3
+        },
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 5.32,
+          "razao_vs_mediana": 0.971,
+          "desvio_percentual": -2.9
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 4,
+          "preco_mediano": 5.29,
+          "razao_vs_mediana": 0.965,
+          "desvio_percentual": -3.5
+        },
+        {
+          "orgao_cnpj": "26994558000123",
+          "orgao_nome": "ADVOCACIA GERAL DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 5.17,
+          "razao_vs_mediana": 0.943,
+          "desvio_percentual": -5.7
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 5.08,
+          "razao_vs_mediana": 0.926,
+          "desvio_percentual": -7.4
+        }
+      ]
+    },
+    {
+      "chave_item": "FONE OUVIDO|UNIDADE",
+      "descricao": "FONE OUVIDO",
+      "descricao_exemplo": "Fone Ouvido",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 15,
+      "observacoes_brutas": 17,
+      "orgaos": 8,
+      "preco_mediano": 114.0,
+      "preco_minimo": 15.47,
+      "preco_maximo": 229.5,
+      "q1": 86.46,
+      "q3": 190.0,
+      "dispersao": 0.939,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 495.99,
+          "quantidade": 250.0,
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "descricao_original": "Fone ouvido"
+        },
+        {
+          "valor_unitario": 860.0,
+          "quantidade": 37.0,
+          "orgao_nome": "CONSELHO NACIONAL DE JUSTICA",
+          "descricao_original": "Fone Ouvido"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "26994558000123",
+          "orgao_nome": "ADVOCACIA GERAL DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 229.5,
+          "razao_vs_mediana": 2.013,
+          "desvio_percentual": 101.3
+        },
+        {
+          "orgao_cnpj": "07421906000129",
+          "orgao_nome": "CONSELHO NACIONAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 215.0,
+          "razao_vs_mediana": 1.886,
+          "desvio_percentual": 88.6
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 190.0,
+          "razao_vs_mediana": 1.667,
+          "desvio_percentual": 66.7
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 2,
+          "preco_mediano": 146.5,
+          "razao_vs_mediana": 1.285,
+          "desvio_percentual": 28.5
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 122.0,
+          "razao_vs_mediana": 1.07,
+          "desvio_percentual": 7.0
+        },
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 2,
+          "preco_mediano": 105.0,
+          "razao_vs_mediana": 0.921,
+          "desvio_percentual": -7.9
+        },
+        {
+          "orgao_cnpj": "33654831000136",
+          "orgao_nome": "CONSELHO NACIONAL DE DESENVOLVIMENTO CIENTIFICO E TECNOLOGICO-CNPQ",
+          "compras": 2,
+          "preco_mediano": 47.7,
+          "razao_vs_mediana": 0.418,
+          "desvio_percentual": -58.2
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 43.0,
+          "razao_vs_mediana": 0.377,
+          "desvio_percentual": -62.3
+        }
+      ]
+    },
+    {
+      "chave_item": "GARRAFA TERMICA|UNIDADE",
+      "descricao": "GARRAFA TERMICA",
+      "descricao_exemplo": "Garrafa térmica",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 13,
+      "observacoes_brutas": 13,
+      "orgaos": 8,
+      "preco_mediano": 47.0,
+      "preco_minimo": 18.81,
+      "preco_maximo": 85.0,
+      "q1": 20.83,
+      "q3": 72.93,
+      "dispersao": 1.109,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "02270669000129",
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "compras": 1,
+          "preco_mediano": 83.42,
+          "razao_vs_mediana": 1.775,
+          "desvio_percentual": 77.5
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 72.93,
+          "razao_vs_mediana": 1.552,
+          "desvio_percentual": 55.2
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 67.85,
+          "razao_vs_mediana": 1.444,
+          "desvio_percentual": 44.4
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 47.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 2,
+          "preco_mediano": 45.02,
+          "razao_vs_mediana": 0.958,
+          "desvio_percentual": -4.2
+        },
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 1,
+          "preco_mediano": 35.0,
+          "razao_vs_mediana": 0.745,
+          "desvio_percentual": -25.5
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 25.41,
+          "razao_vs_mediana": 0.541,
+          "desvio_percentual": -45.9
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 3,
+          "preco_mediano": 19.65,
+          "razao_vs_mediana": 0.418,
+          "desvio_percentual": -58.2
+        }
+      ]
+    },
+    {
+      "chave_item": "AGUA MINERAL NATURAL|GARRAFAO 20 L",
+      "descricao": "AGUA MINERAL NATURAL",
+      "descricao_exemplo": "Água Mineral Natural",
+      "unidade": "GARRAFAO 20 L",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 11,
+      "orgaos": 8,
+      "preco_mediano": 3.76,
+      "preco_minimo": 3.26,
+      "preco_maximo": 8.37,
+      "q1": 3.5,
+      "q3": 4.34,
+      "dispersao": 0.516,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 9.2,
+          "quantidade": 1740.0,
+          "orgao_nome": "AGENCIA NACIONAL DE MINERACAO",
+          "descricao_original": "Água Mineral Natural"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 1,
+          "preco_mediano": 6.49,
+          "razao_vs_mediana": 1.726,
+          "desvio_percentual": 72.6
+        },
+        {
+          "orgao_cnpj": "26994558000123",
+          "orgao_nome": "ADVOCACIA GERAL DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 6.43,
+          "razao_vs_mediana": 1.711,
+          "desvio_percentual": 71.1
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 3.88,
+          "razao_vs_mediana": 1.032,
+          "desvio_percentual": 3.2
+        },
+        {
+          "orgao_cnpj": "00418993000116",
+          "orgao_nome": "CONSELHO ADMINISTRATIVO DE DEFESA ECONOMICA-CADE",
+          "compras": 1,
+          "preco_mediano": 3.79,
+          "razao_vs_mediana": 1.008,
+          "desvio_percentual": 0.8
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 1,
+          "preco_mediano": 3.73,
+          "razao_vs_mediana": 0.992,
+          "desvio_percentual": -0.8
+        },
+        {
+          "orgao_cnpj": "02030715000112",
+          "orgao_nome": "AGENCIA NACIONAL DE TELECOMUNICACOES",
+          "compras": 1,
+          "preco_mediano": 3.66,
+          "razao_vs_mediana": 0.973,
+          "desvio_percentual": -2.7
+        },
+        {
+          "orgao_cnpj": "00394544000185",
+          "orgao_nome": "MINISTERIO DA SAUDE",
+          "compras": 1,
+          "preco_mediano": 3.45,
+          "razao_vs_mediana": 0.918,
+          "desvio_percentual": -8.2
+        },
+        {
+          "orgao_cnpj": "03658507000125",
+          "orgao_nome": "TRIBUNAL REGIONAL FEDERAL DA 1 REGIAO",
+          "compras": 2,
+          "preco_mediano": 3.26,
+          "razao_vs_mediana": 0.867,
+          "desvio_percentual": -13.3
+        }
+      ]
+    },
+    {
+      "chave_item": "AUTOMOVEL|UNIDADE",
+      "descricao": "AUTOMOVEL",
+      "descricao_exemplo": "Automóvel",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 26,
+      "observacoes_brutas": 29,
+      "orgaos": 7,
+      "preco_mediano": 101413.17,
+      "preco_minimo": 81014.0,
+      "preco_maximo": 132800.0,
+      "q1": 81014.0,
+      "q3": 102495.0,
+      "dispersao": 0.273,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 176500.0,
+          "quantidade": 4.0,
+          "orgao_nome": "CONSELHO FEDERAL DE FARMACIA",
+          "descricao_original": "Automóvel"
+        },
+        {
+          "valor_unitario": 280000.0,
+          "quantidade": 284.0,
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "descricao_original": "Automóvel"
+        },
+        {
+          "valor_unitario": 312990.0,
+          "quantidade": 291.0,
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "descricao_original": "Automóvel"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 1,
+          "preco_mediano": 132800.0,
+          "razao_vs_mediana": 1.309,
+          "desvio_percentual": 30.9
+        },
+        {
+          "orgao_cnpj": "03658507000125",
+          "orgao_nome": "TRIBUNAL REGIONAL FEDERAL DA 1 REGIAO",
+          "compras": 1,
+          "preco_mediano": 131005.0,
+          "razao_vs_mediana": 1.292,
+          "desvio_percentual": 29.2
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 11,
+          "preco_mediano": 102495.0,
+          "razao_vs_mediana": 1.011,
+          "desvio_percentual": 1.1
+        },
+        {
+          "orgao_cnpj": "05526783000165",
+          "orgao_nome": "MINISTERIO DA CIDADANIA",
+          "compras": 1,
+          "preco_mediano": 100426.33,
+          "razao_vs_mediana": 0.99,
+          "desvio_percentual": -1.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 99495.0,
+          "razao_vs_mediana": 0.981,
+          "desvio_percentual": -1.9
+        },
+        {
+          "orgao_cnpj": "00304725000173",
+          "orgao_nome": "CONSELHO REGIONAL DE ENGENHARIA E AGRONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 87290.0,
+          "razao_vs_mediana": 0.861,
+          "desvio_percentual": -13.9
+        },
+        {
+          "orgao_cnpj": "00489828000155",
+          "orgao_nome": "MINISTERIO DA GESTAO E DA INOVACAO EM SERVICOS PUBLICOS",
+          "compras": 10,
+          "preco_mediano": 81014.0,
+          "razao_vs_mediana": 0.799,
+          "desvio_percentual": -20.1
+        }
+      ]
+    },
+    {
+      "chave_item": "MESA ESCRITORIO|UNIDADE",
+      "descricao": "MESA ESCRITORIO",
+      "descricao_exemplo": "Mesa escritório",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 13,
+      "observacoes_brutas": 14,
+      "orgaos": 7,
+      "preco_mediano": 1150.0,
+      "preco_minimo": 500.0,
+      "preco_maximo": 3310.0,
+      "q1": 850.0,
+      "q3": 1450.0,
+      "dispersao": 1.102,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 6878.25,
+          "quantidade": 4.0,
+          "orgao_nome": "SENADO FEDERAL",
+          "descricao_original": "Mesa escritório"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 2962.0,
+          "razao_vs_mediana": 2.576,
+          "desvio_percentual": 157.6
+        },
+        {
+          "orgao_cnpj": "26963645000113",
+          "orgao_nome": "CAMARA LEGISLATIVA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 1880.0,
+          "razao_vs_mediana": 1.635,
+          "desvio_percentual": 63.5
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 1384.85,
+          "razao_vs_mediana": 1.204,
+          "desvio_percentual": 20.4
+        },
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 1,
+          "preco_mediano": 1106.13,
+          "razao_vs_mediana": 0.962,
+          "desvio_percentual": -3.8
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 2,
+          "preco_mediano": 925.0,
+          "razao_vs_mediana": 0.804,
+          "desvio_percentual": -19.6
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 880.0,
+          "razao_vs_mediana": 0.765,
+          "desvio_percentual": -23.5
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 3,
+          "preco_mediano": 780.0,
+          "razao_vs_mediana": 0.678,
+          "desvio_percentual": -32.2
+        }
+      ]
+    },
+    {
+      "chave_item": "REFRIGERADOR DUPLEX|UNIDADE",
+      "descricao": "REFRIGERADOR DUPLEX",
+      "descricao_exemplo": "Refrigerador duplex",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 12,
+      "observacoes_brutas": 12,
+      "orgaos": 7,
+      "preco_mediano": 2831.72,
+      "preco_minimo": 2324.0,
+      "preco_maximo": 3200.0,
+      "q1": 2581.99,
+      "q3": 2848.17,
+      "dispersao": 0.094,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "01263896000164",
+          "orgao_nome": "MINISTERIO DA CIENCIA, TECNOLOGIA E INOVACOES",
+          "compras": 1,
+          "preco_mediano": 3200.0,
+          "razao_vs_mediana": 1.13,
+          "desvio_percentual": 13.0
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 2989.0,
+          "razao_vs_mediana": 1.056,
+          "desvio_percentual": 5.6
+        },
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 4,
+          "preco_mediano": 2848.17,
+          "razao_vs_mediana": 1.006,
+          "desvio_percentual": 0.6
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 2839.0,
+          "razao_vs_mediana": 1.003,
+          "desvio_percentual": 0.3
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 2,
+          "preco_mediano": 2707.32,
+          "razao_vs_mediana": 0.956,
+          "desvio_percentual": -4.4
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 2,
+          "preco_mediano": 2420.0,
+          "razao_vs_mediana": 0.855,
+          "desvio_percentual": -14.5
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 2324.0,
+          "razao_vs_mediana": 0.821,
+          "desvio_percentual": -17.9
+        }
+      ]
+    },
+    {
+      "chave_item": "SACOLA|UNIDADE",
+      "descricao": "SACOLA",
+      "descricao_exemplo": "Sacola",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 10,
+      "orgaos": 7,
+      "preco_mediano": 11.85,
+      "preco_minimo": 7.5,
+      "preco_maximo": 16.7,
+      "q1": 9.51,
+      "q3": 12.25,
+      "dispersao": 0.359,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 0.48,
+          "quantidade": 20000.0,
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "descricao_original": "Sacola"
+        },
+        {
+          "valor_unitario": 1.14,
+          "quantidade": 14000.0,
+          "orgao_nome": "SENADO FEDERAL",
+          "descricao_original": "Sacola"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 16.7,
+          "razao_vs_mediana": 1.409,
+          "desvio_percentual": 40.9
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 2,
+          "preco_mediano": 12.5,
+          "razao_vs_mediana": 1.055,
+          "desvio_percentual": 5.5
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 12.0,
+          "razao_vs_mediana": 1.013,
+          "desvio_percentual": 1.3
+        },
+        {
+          "orgao_cnpj": "00444232000139",
+          "orgao_nome": "INDUSTRIA DE MATERIAL BELICO DO BRASIL IMBEL",
+          "compras": 1,
+          "preco_mediano": 11.7,
+          "razao_vs_mediana": 0.987,
+          "desvio_percentual": -1.3
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 9.85,
+          "razao_vs_mediana": 0.831,
+          "desvio_percentual": -16.9
+        },
+        {
+          "orgao_cnpj": "00697722000147",
+          "orgao_nome": "CONSELHO FEDERAL DE FONOAUDIOLOGIA",
+          "compras": 1,
+          "preco_mediano": 8.49,
+          "razao_vs_mediana": 0.716,
+          "desvio_percentual": -28.4
+        },
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 1,
+          "preco_mediano": 7.5,
+          "razao_vs_mediana": 0.633,
+          "desvio_percentual": -36.7
+        }
+      ]
+    },
+    {
+      "chave_item": "APONTADOR LAPIS|UNIDADE",
+      "descricao": "APONTADOR LAPIS",
+      "descricao_exemplo": "Apontador lápis",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 8,
+      "orgaos": 7,
+      "preco_mediano": 0.66,
+      "preco_minimo": 0.5,
+      "preco_maximo": 0.79,
+      "q1": 0.55,
+      "q3": 0.71,
+      "dispersao": 0.269,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 3.4,
+          "quantidade": 15.0,
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "descricao_original": "Apontador lápis"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 0.79,
+          "razao_vs_mediana": 1.197,
+          "desvio_percentual": 19.7
+        },
+        {
+          "orgao_cnpj": "00399857000126",
+          "orgao_nome": "COMPANHIA DE DESENV. DO VALE DO SAO FRANCISCO",
+          "compras": 1,
+          "preco_mediano": 0.73,
+          "razao_vs_mediana": 1.106,
+          "desvio_percentual": 10.6
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 0.7,
+          "razao_vs_mediana": 1.061,
+          "desvio_percentual": 6.1
+        },
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 0.66,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00444232000139",
+          "orgao_nome": "INDUSTRIA DE MATERIAL BELICO DO BRASIL IMBEL",
+          "compras": 1,
+          "preco_mediano": 0.58,
+          "razao_vs_mediana": 0.879,
+          "desvio_percentual": -12.1
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 0.53,
+          "razao_vs_mediana": 0.803,
+          "desvio_percentual": -19.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 0.5,
+          "razao_vs_mediana": 0.758,
+          "desvio_percentual": -24.2
+        }
+      ]
+    },
+    {
+      "chave_item": "PAPEL PARA IMPRESSAO FORMATADO|EMBALAGEM 500 00 FL",
+      "descricao": "PAPEL PARA IMPRESSAO FORMATADO",
+      "descricao_exemplo": "Papel Para Impressão Formatado",
+      "unidade": "EMBALAGEM 500 00 FL",
+      "material_ou_servico": "M",
+      "observacoes": 17,
+      "observacoes_brutas": 17,
+      "orgaos": 6,
+      "preco_mediano": 400.0,
+      "preco_minimo": 18.2,
+      "preco_maximo": 1240.0,
+      "q1": 21.0,
+      "q3": 640.0,
+      "dispersao": 1.548,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 10,
+          "preco_mediano": 625.0,
+          "razao_vs_mediana": 1.562,
+          "desvio_percentual": 56.2
+        },
+        {
+          "orgao_cnpj": "02270669000129",
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "compras": 2,
+          "preco_mediano": 330.0,
+          "razao_vs_mediana": 0.825,
+          "desvio_percentual": -17.5
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 20.8,
+          "razao_vs_mediana": 0.052,
+          "desvio_percentual": -94.8
+        },
+        {
+          "orgao_cnpj": "30871497000184",
+          "orgao_nome": "CONSELHO FEDERAL DOS TECNICOS INDUSTRIAIS",
+          "compras": 1,
+          "preco_mediano": 21.0,
+          "razao_vs_mediana": 0.052,
+          "desvio_percentual": -94.8
+        },
+        {
+          "orgao_cnpj": "00399857000126",
+          "orgao_nome": "COMPANHIA DE DESENV. DO VALE DO SAO FRANCISCO",
+          "compras": 1,
+          "preco_mediano": 20.54,
+          "razao_vs_mediana": 0.051,
+          "desvio_percentual": -94.9
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 19.05,
+          "razao_vs_mediana": 0.048,
+          "desvio_percentual": -95.2
+        }
+      ]
+    },
+    {
+      "chave_item": "CAMISETA|UNIDADE",
+      "descricao": "CAMISETA",
+      "descricao_exemplo": "Camiseta",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 12,
+      "observacoes_brutas": 12,
+      "orgaos": 6,
+      "preco_mediano": 16.52,
+      "preco_minimo": 12.0,
+      "preco_maximo": 60.0,
+      "q1": 12.41,
+      "q3": 32.62,
+      "dispersao": 1.223,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 1,
+          "preco_mediano": 60.0,
+          "razao_vs_mediana": 3.631,
+          "desvio_percentual": 263.1
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 38.5,
+          "razao_vs_mediana": 2.33,
+          "desvio_percentual": 133.0
+        },
+        {
+          "orgao_cnpj": "47217146000157",
+          "orgao_nome": "CONSELHO FEDERAL DE ENFERMAGEM COFEN",
+          "compras": 1,
+          "preco_mediano": 37.49,
+          "razao_vs_mediana": 2.269,
+          "desvio_percentual": 126.9
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 21.5,
+          "razao_vs_mediana": 1.301,
+          "desvio_percentual": 30.1
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 1,
+          "preco_mediano": 19.0,
+          "razao_vs_mediana": 1.15,
+          "desvio_percentual": 15.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 6,
+          "preco_mediano": 12.28,
+          "razao_vs_mediana": 0.743,
+          "desvio_percentual": -25.7
+        }
+      ]
+    },
+    {
+      "chave_item": "POLTRONA|UNIDADE",
+      "descricao": "POLTRONA",
+      "descricao_exemplo": "Poltrona",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 11,
+      "orgaos": 6,
+      "preco_mediano": 1597.5,
+      "preco_minimo": 345.9,
+      "preco_maximo": 2500.0,
+      "q1": 1202.0,
+      "q3": 1911.5,
+      "dispersao": 0.472,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 6989.0,
+          "quantidade": 3.0,
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "descricao_original": "Poltrona"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 2500.0,
+          "razao_vs_mediana": 1.565,
+          "desvio_percentual": 56.5
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 2000.0,
+          "razao_vs_mediana": 1.252,
+          "desvio_percentual": 25.2
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 3,
+          "preco_mediano": 1605.0,
+          "razao_vs_mediana": 1.005,
+          "desvio_percentual": 0.5
+        },
+        {
+          "orgao_cnpj": "00414607000118",
+          "orgao_nome": "TRIBUNAL DE CONTAS DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 1590.0,
+          "razao_vs_mediana": 0.995,
+          "desvio_percentual": -0.5
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 1394.0,
+          "razao_vs_mediana": 0.873,
+          "desvio_percentual": -12.7
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 3,
+          "preco_mediano": 1138.0,
+          "razao_vs_mediana": 0.712,
+          "desvio_percentual": -28.8
+        }
+      ]
+    },
+    {
+      "chave_item": "CANETA MARCA TEXTO|UNIDADE",
+      "descricao": "CANETA MARCA TEXTO",
+      "descricao_exemplo": "Caneta marca-texto",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 10,
+      "orgaos": 6,
+      "preco_mediano": 0.82,
+      "preco_minimo": 0.64,
+      "preco_maximo": 2.87,
+      "q1": 0.66,
+      "q3": 1.94,
+      "dispersao": 1.545,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "33839275000172",
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "compras": 3,
+          "preco_mediano": 2.87,
+          "razao_vs_mediana": 3.479,
+          "desvio_percentual": 247.9
+        },
+        {
+          "orgao_cnpj": "26963645000113",
+          "orgao_nome": "CAMARA LEGISLATIVA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 0.85,
+          "razao_vs_mediana": 1.03,
+          "desvio_percentual": 3.0
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 0.8,
+          "razao_vs_mediana": 0.97,
+          "desvio_percentual": -3.0
+        },
+        {
+          "orgao_cnpj": "33618570000107",
+          "orgao_nome": "CONSELHO FEDERAL DE CONTABILIDADE",
+          "compras": 1,
+          "preco_mediano": 0.73,
+          "razao_vs_mediana": 0.885,
+          "desvio_percentual": -11.5
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 0.64,
+          "razao_vs_mediana": 0.776,
+          "desvio_percentual": -22.4
+        },
+        {
+          "orgao_cnpj": "30871497000184",
+          "orgao_nome": "CONSELHO FEDERAL DOS TECNICOS INDUSTRIAIS",
+          "compras": 1,
+          "preco_mediano": 0.64,
+          "razao_vs_mediana": 0.776,
+          "desvio_percentual": -22.4
+        }
+      ]
+    },
+    {
+      "chave_item": "BLOCO RECADO|BLOCO 100 00 FL",
+      "descricao": "BLOCO RECADO",
+      "descricao_exemplo": "Bloco Recado",
+      "unidade": "BLOCO 100 00 FL",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 10,
+      "orgaos": 6,
+      "preco_mediano": 2.57,
+      "preco_minimo": 1.6,
+      "preco_maximo": 3.75,
+      "q1": 2.24,
+      "q3": 3.09,
+      "dispersao": 0.329,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 3.75,
+          "razao_vs_mediana": 1.459,
+          "desvio_percentual": 45.9
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 2,
+          "preco_mediano": 2.95,
+          "razao_vs_mediana": 1.148,
+          "desvio_percentual": 14.8
+        },
+        {
+          "orgao_cnpj": "30871497000184",
+          "orgao_nome": "CONSELHO FEDERAL DOS TECNICOS INDUSTRIAIS",
+          "compras": 1,
+          "preco_mediano": 2.75,
+          "razao_vs_mediana": 1.07,
+          "desvio_percentual": 7.0
+        },
+        {
+          "orgao_cnpj": "00444232000139",
+          "orgao_nome": "INDUSTRIA DE MATERIAL BELICO DO BRASIL IMBEL",
+          "compras": 2,
+          "preco_mediano": 2.6,
+          "razao_vs_mediana": 1.012,
+          "desvio_percentual": 1.2
+        },
+        {
+          "orgao_cnpj": "00399857000126",
+          "orgao_nome": "COMPANHIA DE DESENV. DO VALE DO SAO FRANCISCO",
+          "compras": 1,
+          "preco_mediano": 2.54,
+          "razao_vs_mediana": 0.988,
+          "desvio_percentual": -1.2
+        },
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 2.18,
+          "razao_vs_mediana": 0.848,
+          "desvio_percentual": -15.2
+        }
+      ]
+    },
+    {
+      "chave_item": "ARMARIO ESCRITORIO|UNIDADE",
+      "descricao": "ARMARIO ESCRITORIO",
+      "descricao_exemplo": "Armário escritório",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 9,
+      "observacoes_brutas": 10,
+      "orgaos": 6,
+      "preco_mediano": 800.0,
+      "preco_minimo": 550.0,
+      "preco_maximo": 1100.0,
+      "q1": 790.0,
+      "q3": 990.0,
+      "dispersao": 0.256,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 1435.0,
+          "quantidade": 15.0,
+          "orgao_nome": "CAMARA LEGISLATIVA DO DISTRITO FEDERAL",
+          "descricao_original": "Armário escritório"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 1100.0,
+          "razao_vs_mediana": 1.375,
+          "desvio_percentual": 37.5
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 915.0,
+          "razao_vs_mediana": 1.144,
+          "desvio_percentual": 14.4
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 890.0,
+          "razao_vs_mediana": 1.113,
+          "desvio_percentual": 11.3
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 800.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "17270702000198",
+          "orgao_nome": "CONSELHO SUPERIOR DA JUST DO TRABALHO",
+          "compras": 2,
+          "preco_mediano": 725.0,
+          "razao_vs_mediana": 0.906,
+          "desvio_percentual": -9.4
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 1,
+          "preco_mediano": 550.0,
+          "razao_vs_mediana": 0.688,
+          "desvio_percentual": -31.2
+        }
+      ]
+    },
+    {
+      "chave_item": "MOUSE COMPUTADOR|UNIDADE",
+      "descricao": "MOUSE COMPUTADOR",
+      "descricao_exemplo": "Mouse computador",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 6,
+      "preco_mediano": 25.49,
+      "preco_minimo": 5.98,
+      "preco_maximo": 60.0,
+      "q1": 13.54,
+      "q3": 37.55,
+      "dispersao": 0.942,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00697722000147",
+          "orgao_nome": "CONSELHO FEDERAL DE FONOAUDIOLOGIA",
+          "compras": 1,
+          "preco_mediano": 60.0,
+          "razao_vs_mediana": 2.353,
+          "desvio_percentual": 135.3
+        },
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 2,
+          "preco_mediano": 43.37,
+          "razao_vs_mediana": 1.701,
+          "desvio_percentual": 70.1
+        },
+        {
+          "orgao_cnpj": "33839275000172",
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "compras": 1,
+          "preco_mediano": 19.99,
+          "razao_vs_mediana": 0.784,
+          "desvio_percentual": -21.6
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 2,
+          "preco_mediano": 18.49,
+          "razao_vs_mediana": 0.725,
+          "desvio_percentual": -27.5
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 15.38,
+          "razao_vs_mediana": 0.603,
+          "desvio_percentual": -39.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 8.0,
+          "razao_vs_mediana": 0.314,
+          "desvio_percentual": -68.6
+        }
+      ]
+    },
+    {
+      "chave_item": "APARELHO PURIFICADOR DE AGUA|UNIDADE",
+      "descricao": "APARELHO PURIFICADOR DE AGUA",
+      "descricao_exemplo": "Aparelho purificador de água",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 7,
+      "orgaos": 6,
+      "preco_mediano": 656.79,
+      "preco_minimo": 620.0,
+      "preco_maximo": 873.26,
+      "q1": 650.14,
+      "q3": 683.16,
+      "dispersao": 0.199,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 1011.0,
+          "quantidade": 20.0,
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "descricao_original": "Aparelho purificador de água"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 873.26,
+          "razao_vs_mediana": 1.33,
+          "desvio_percentual": 33.0
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 690.88,
+          "razao_vs_mediana": 1.052,
+          "desvio_percentual": 5.2
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 660.0,
+          "razao_vs_mediana": 1.005,
+          "desvio_percentual": 0.5
+        },
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 1,
+          "preco_mediano": 653.58,
+          "razao_vs_mediana": 0.995,
+          "desvio_percentual": -0.5
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 649.0,
+          "razao_vs_mediana": 0.988,
+          "desvio_percentual": -1.2
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 620.0,
+          "razao_vs_mediana": 0.944,
+          "desvio_percentual": -5.6
+        }
+      ]
+    },
+    {
+      "chave_item": "ESTACAO TRABALHO|UNIDADE",
+      "descricao": "ESTACAO TRABALHO",
+      "descricao_exemplo": "Estação trabalho",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 14,
+      "observacoes_brutas": 14,
+      "orgaos": 5,
+      "preco_mediano": 3050.0,
+      "preco_minimo": 240.0,
+      "preco_maximo": 6000.0,
+      "q1": 980.0,
+      "q3": 3475.0,
+      "dispersao": 0.818,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 3,
+          "preco_mediano": 5400.0,
+          "razao_vs_mediana": 1.77,
+          "desvio_percentual": 77.0
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 3400.0,
+          "razao_vs_mediana": 1.115,
+          "desvio_percentual": 11.5
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 3,
+          "preco_mediano": 3000.0,
+          "razao_vs_mediana": 0.984,
+          "desvio_percentual": -1.6
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 1250.0,
+          "razao_vs_mediana": 0.41,
+          "desvio_percentual": -59.0
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 287.5,
+          "razao_vs_mediana": 0.094,
+          "desvio_percentual": -90.6
+        }
+      ]
+    },
+    {
+      "chave_item": "LIXEIRA|UNIDADE",
+      "descricao": "LIXEIRA",
+      "descricao_exemplo": "Lixeira",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 10,
+      "orgaos": 5,
+      "preco_mediano": 101.44,
+      "preco_minimo": 11.9,
+      "preco_maximo": 298.0,
+      "q1": 49.67,
+      "q3": 248.1,
+      "dispersao": 1.956,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 3,
+          "preco_mediano": 228.0,
+          "razao_vs_mediana": 2.248,
+          "desvio_percentual": 124.8
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 211.75,
+          "razao_vs_mediana": 2.087,
+          "desvio_percentual": 108.7
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 2,
+          "preco_mediano": 165.35,
+          "razao_vs_mediana": 1.63,
+          "desvio_percentual": 63.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 41.9,
+          "razao_vs_mediana": 0.413,
+          "desvio_percentual": -58.7
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 11.9,
+          "razao_vs_mediana": 0.117,
+          "desvio_percentual": -88.3
+        }
+      ]
+    },
+    {
+      "chave_item": "ARMARIO|UNIDADE",
+      "descricao": "ARMARIO",
+      "descricao_exemplo": "Armário",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 9,
+      "observacoes_brutas": 10,
+      "orgaos": 5,
+      "preco_mediano": 1100.0,
+      "preco_minimo": 690.0,
+      "preco_maximo": 2500.0,
+      "q1": 779.0,
+      "q3": 1400.0,
+      "dispersao": 0.655,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 2900.0,
+          "quantidade": 1.0,
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "descricao_original": "Armário"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00531640000128",
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "compras": 1,
+          "preco_mediano": 2500.0,
+          "razao_vs_mediana": 2.273,
+          "desvio_percentual": 127.3
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 1444.0,
+          "razao_vs_mediana": 1.313,
+          "desvio_percentual": 31.3
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 939.5,
+          "razao_vs_mediana": 0.854,
+          "desvio_percentual": -14.6
+        },
+        {
+          "orgao_cnpj": "00396895000125",
+          "orgao_nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
+          "compras": 1,
+          "preco_mediano": 800.0,
+          "razao_vs_mediana": 0.727,
+          "desvio_percentual": -27.3
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 3,
+          "preco_mediano": 690.0,
+          "razao_vs_mediana": 0.627,
+          "desvio_percentual": -37.3
+        }
+      ]
+    },
+    {
+      "chave_item": "CAMISA UNIFORME|UNIDADE",
+      "descricao": "CAMISA UNIFORME",
+      "descricao_exemplo": "Camisa uniforme",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 5,
+      "preco_mediano": 59.0,
+      "preco_minimo": 40.0,
+      "preco_maximo": 155.0,
+      "q1": 44.25,
+      "q3": 142.44,
+      "dispersao": 1.664,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 155.0,
+          "razao_vs_mediana": 2.627,
+          "desvio_percentual": 162.7
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 139.92,
+          "razao_vs_mediana": 2.372,
+          "desvio_percentual": 137.2
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 55.0,
+          "razao_vs_mediana": 0.932,
+          "desvio_percentual": -6.8
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 52.5,
+          "razao_vs_mediana": 0.89,
+          "desvio_percentual": -11.0
+        },
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 1,
+          "preco_mediano": 45.0,
+          "razao_vs_mediana": 0.763,
+          "desvio_percentual": -23.7
+        }
+      ]
+    },
+    {
+      "chave_item": "PASTA EVENTOS|UNIDADE",
+      "descricao": "PASTA EVENTOS",
+      "descricao_exemplo": "Pasta eventos",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 5,
+      "preco_mediano": 24.5,
+      "preco_minimo": 2.37,
+      "preco_maximo": 65.0,
+      "q1": 11.62,
+      "q3": 51.0,
+      "dispersao": 1.607,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 2,
+          "preco_mediano": 57.5,
+          "razao_vs_mediana": 2.347,
+          "desvio_percentual": 134.7
+        },
+        {
+          "orgao_cnpj": "04892707000100",
+          "orgao_nome": "DNIT-DEPARTAMENTO NACIONAL DE INFRAEST DE TRANSPORTES",
+          "compras": 1,
+          "preco_mediano": 54.0,
+          "razao_vs_mediana": 2.204,
+          "desvio_percentual": 120.4
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 35.0,
+          "razao_vs_mediana": 1.429,
+          "desvio_percentual": 42.9
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 3,
+          "preco_mediano": 12.5,
+          "razao_vs_mediana": 0.51,
+          "desvio_percentual": -49.0
+        },
+        {
+          "orgao_cnpj": "14981648000109",
+          "orgao_nome": "CONSELHO DE ARQUITETURA E URBANISMO DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 2.37,
+          "razao_vs_mediana": 0.097,
+          "desvio_percentual": -90.3
+        }
+      ]
+    },
+    {
+      "chave_item": "SUPORTE|UNIDADE",
+      "descricao": "SUPORTE",
+      "descricao_exemplo": "Suporte",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 5,
+      "preco_mediano": 35.0,
+      "preco_minimo": 8.9,
+      "preco_maximo": 99.0,
+      "q1": 35.0,
+      "q3": 96.99,
+      "dispersao": 1.771,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 99.0,
+          "razao_vs_mediana": 2.829,
+          "desvio_percentual": 182.9
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 96.99,
+          "razao_vs_mediana": 2.771,
+          "desvio_percentual": 177.1
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 2,
+          "preco_mediano": 35.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "07290290000102",
+          "orgao_nome": "SUPERINTENDENCIA NACIONAL DE PREVIDENCIA COMPLEMENTAR",
+          "compras": 1,
+          "preco_mediano": 35.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "47217146000157",
+          "orgao_nome": "CONSELHO FEDERAL DE ENFERMAGEM COFEN",
+          "compras": 1,
+          "preco_mediano": 8.9,
+          "razao_vs_mediana": 0.254,
+          "desvio_percentual": -74.6
+        }
+      ]
+    },
+    {
+      "chave_item": "CAFETEIRA ELETRICA|UNIDADE",
+      "descricao": "CAFETEIRA ELETRICA",
+      "descricao_exemplo": "Cafeteira Elétrica",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 5,
+      "preco_mediano": 1752.0,
+      "preco_minimo": 868.0,
+      "preco_maximo": 3200.0,
+      "q1": 1077.17,
+      "q3": 2051.81,
+      "dispersao": 0.556,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 2,
+          "preco_mediano": 2727.81,
+          "razao_vs_mediana": 1.557,
+          "desvio_percentual": 55.7
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 1848.0,
+          "razao_vs_mediana": 1.055,
+          "desvio_percentual": 5.5
+        },
+        {
+          "orgao_cnpj": "02270669000129",
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "compras": 1,
+          "preco_mediano": 1752.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 1179.1,
+          "razao_vs_mediana": 0.673,
+          "desvio_percentual": -32.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 921.62,
+          "razao_vs_mediana": 0.526,
+          "desvio_percentual": -47.4
+        }
+      ]
+    },
+    {
+      "chave_item": "DISCO MAGNETICO|UNIDADE",
+      "descricao": "DISCO MAGNETICO",
+      "descricao_exemplo": "Disco Magnético",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 5,
+      "preco_mediano": 794.6,
+      "preco_minimo": 85.0,
+      "preco_maximo": 1700.0,
+      "q1": 400.36,
+      "q3": 1201.66,
+      "dispersao": 1.008,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "04903587000108",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES AQUAVIARIOS",
+          "compras": 1,
+          "preco_mediano": 1700.0,
+          "razao_vs_mediana": 2.139,
+          "desvio_percentual": 113.9
+        },
+        {
+          "orgao_cnpj": "01264266000104",
+          "orgao_nome": "CONSELHO REGIONAL DE ADMINISTRACAO DO DF",
+          "compras": 2,
+          "preco_mediano": 1021.71,
+          "razao_vs_mediana": 1.286,
+          "desvio_percentual": 28.6
+        },
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 861.0,
+          "razao_vs_mediana": 1.084,
+          "desvio_percentual": 8.4
+        },
+        {
+          "orgao_cnpj": "07290290000102",
+          "orgao_nome": "SUPERINTENDENCIA NACIONAL DE PREVIDENCIA COMPLEMENTAR",
+          "compras": 1,
+          "preco_mediano": 291.08,
+          "razao_vs_mediana": 0.366,
+          "desvio_percentual": -63.4
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 85.0,
+          "razao_vs_mediana": 0.107,
+          "desvio_percentual": -89.3
+        }
+      ]
+    },
+    {
+      "chave_item": "REFRIGERADOR DOMESTICO|UNIDADE",
+      "descricao": "REFRIGERADOR DOMESTICO",
+      "descricao_exemplo": "Refrigerador doméstico",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 5,
+      "preco_mediano": 2916.0,
+      "preco_minimo": 1710.0,
+      "preco_maximo": 3200.0,
+      "q1": 2462.74,
+      "q3": 3074.31,
+      "dispersao": 0.21,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 3200.0,
+          "razao_vs_mediana": 1.097,
+          "desvio_percentual": 9.7
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 3012.0,
+          "razao_vs_mediana": 1.033,
+          "desvio_percentual": 3.3
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 2820.0,
+          "razao_vs_mediana": 0.967,
+          "desvio_percentual": -3.3
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 2402.54,
+          "razao_vs_mediana": 0.824,
+          "desvio_percentual": -17.6
+        },
+        {
+          "orgao_cnpj": "33654831000136",
+          "orgao_nome": "CONSELHO NACIONAL DE DESENVOLVIMENTO CIENTIFICO E TECNOLOGICO-CNPQ",
+          "compras": 1,
+          "preco_mediano": 2343.66,
+          "razao_vs_mediana": 0.804,
+          "desvio_percentual": -19.6
+        }
+      ]
+    },
+    {
+      "chave_item": "BALDE|UNIDADE",
+      "descricao": "BALDE",
+      "descricao_exemplo": "Balde",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 5,
+      "preco_mediano": 31.3,
+      "preco_minimo": 14.8,
+      "preco_maximo": 73.58,
+      "q1": 18.88,
+      "q3": 49.98,
+      "dispersao": 0.994,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 73.58,
+          "razao_vs_mediana": 2.351,
+          "desvio_percentual": 135.1
+        },
+        {
+          "orgao_cnpj": "33839275000172",
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "compras": 2,
+          "preco_mediano": 35.48,
+          "razao_vs_mediana": 1.134,
+          "desvio_percentual": 13.4
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 32.6,
+          "razao_vs_mediana": 1.042,
+          "desvio_percentual": 4.2
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 29.99,
+          "razao_vs_mediana": 0.958,
+          "desvio_percentual": -4.2
+        },
+        {
+          "orgao_cnpj": "35438630000127",
+          "orgao_nome": "CFTA CONSELHO FEDERAL DOS TECNICOS AGRICOLAS",
+          "compras": 1,
+          "preco_mediano": 14.8,
+          "razao_vs_mediana": 0.473,
+          "desvio_percentual": -52.7
+        }
+      ]
+    },
+    {
+      "chave_item": "CAFE|PACOTE 500 00 G",
+      "descricao": "CAFE",
+      "descricao_exemplo": "Café",
+      "unidade": "PACOTE 500 00 G",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 5,
+      "preco_mediano": 11.0,
+      "preco_minimo": 9.97,
+      "preco_maximo": 14.76,
+      "q1": 10.8,
+      "q3": 12.91,
+      "dispersao": 0.192,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00105650000100",
+          "orgao_nome": "CONSELHO REGIONAL DE CORRETORES DE IMOVEIS DA 8 REGIAO",
+          "compras": 1,
+          "preco_mediano": 14.76,
+          "razao_vs_mediana": 1.342,
+          "desvio_percentual": 34.2
+        },
+        {
+          "orgao_cnpj": "00444232000139",
+          "orgao_nome": "INDUSTRIA DE MATERIAL BELICO DO BRASIL IMBEL",
+          "compras": 1,
+          "preco_mediano": 12.91,
+          "razao_vs_mediana": 1.174,
+          "desvio_percentual": 17.4
+        },
+        {
+          "orgao_cnpj": "00375114000116",
+          "orgao_nome": "DEFENSORIA PUBLICA DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 11.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 10.8,
+          "razao_vs_mediana": 0.982,
+          "desvio_percentual": -1.8
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 9.97,
+          "razao_vs_mediana": 0.906,
+          "desvio_percentual": -9.4
+        }
+      ]
+    },
+    {
+      "chave_item": "AGUA MINERAL NATURAL|GARRAFAO 20 00 L",
+      "descricao": "AGUA MINERAL NATURAL",
+      "descricao_exemplo": "Água mineral natural",
+      "unidade": "GARRAFAO 20 00 L",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 6,
+      "orgaos": 5,
+      "preco_mediano": 4.25,
+      "preco_minimo": 3.83,
+      "preco_maximo": 4.4,
+      "q1": 4.0,
+      "q3": 4.29,
+      "dispersao": 0.073,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 296985.0,
+          "quantidade": 1.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "descricao_original": "Água mineral natural"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 4.4,
+          "razao_vs_mediana": 1.035,
+          "desvio_percentual": 3.5
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 1,
+          "preco_mediano": 4.29,
+          "razao_vs_mediana": 1.009,
+          "desvio_percentual": 0.9
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 4.25,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "02270669000129",
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "compras": 1,
+          "preco_mediano": 4.0,
+          "razao_vs_mediana": 0.941,
+          "desvio_percentual": -5.9
+        },
+        {
+          "orgao_cnpj": "07421906000129",
+          "orgao_nome": "CONSELHO NACIONAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 3.83,
+          "razao_vs_mediana": 0.901,
+          "desvio_percentual": -9.9
+        }
+      ]
+    },
+    {
+      "chave_item": "FRAGMENTADORA PAPEL|UNIDADE",
+      "descricao": "FRAGMENTADORA PAPEL",
+      "descricao_exemplo": "Fragmentadora papel",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 5,
+      "preco_mediano": 2880.0,
+      "preco_minimo": 1500.0,
+      "preco_maximo": 7458.12,
+      "q1": 2590.0,
+      "q3": 4800.0,
+      "dispersao": 0.767,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 7458.12,
+          "razao_vs_mediana": 2.59,
+          "desvio_percentual": 159.0
+        },
+        {
+          "orgao_cnpj": "00531640000128",
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "compras": 1,
+          "preco_mediano": 4800.0,
+          "razao_vs_mediana": 1.667,
+          "desvio_percentual": 66.7
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 2880.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00038166000105",
+          "orgao_nome": "BANCO CENTRAL DO BRASIL",
+          "compras": 1,
+          "preco_mediano": 2590.0,
+          "razao_vs_mediana": 0.899,
+          "desvio_percentual": -10.1
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 1500.0,
+          "razao_vs_mediana": 0.521,
+          "desvio_percentual": -47.9
+        }
+      ]
+    },
+    {
+      "chave_item": "BORRACHA APAGADORA ESCRITA|UNIDADE",
+      "descricao": "BORRACHA APAGADORA ESCRITA",
+      "descricao_exemplo": "Borracha apagadora escrita",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 6,
+      "orgaos": 5,
+      "preco_mediano": 0.66,
+      "preco_minimo": 0.44,
+      "preco_maximo": 0.75,
+      "q1": 0.49,
+      "q3": 0.7,
+      "dispersao": 0.311,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 1.7,
+          "quantidade": 30.0,
+          "orgao_nome": "CONSELHO FEDERAL DE QUIMICA",
+          "descricao_original": "Borracha apagadora escrita"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00444232000139",
+          "orgao_nome": "INDUSTRIA DE MATERIAL BELICO DO BRASIL IMBEL",
+          "compras": 1,
+          "preco_mediano": 0.75,
+          "razao_vs_mediana": 1.136,
+          "desvio_percentual": 13.6
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 0.7,
+          "razao_vs_mediana": 1.061,
+          "desvio_percentual": 6.1
+        },
+        {
+          "orgao_cnpj": "00534560000126",
+          "orgao_nome": "TRIBUNAL DE CONTAS DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 0.66,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 0.49,
+          "razao_vs_mediana": 0.742,
+          "desvio_percentual": -25.8
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 0.44,
+          "razao_vs_mediana": 0.667,
+          "desvio_percentual": -33.3
+        }
+      ]
+    },
+    {
+      "chave_item": "BOLSA|UNIDADE",
+      "descricao": "BOLSA",
+      "descricao_exemplo": "Bolsa",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 5,
+      "preco_mediano": 129.1,
+      "preco_minimo": 10.0,
+      "preco_maximo": 249.9,
+      "q1": 118.88,
+      "q3": 200.0,
+      "dispersao": 0.628,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "29406625000130",
+          "orgao_nome": "AGENCIA NACIONAL DE MINERACAO",
+          "compras": 1,
+          "preco_mediano": 249.9,
+          "razao_vs_mediana": 1.936,
+          "desvio_percentual": 93.6
+        },
+        {
+          "orgao_cnpj": "33892175000100",
+          "orgao_nome": "INSTITUTO DE PESQUISA ECONOMICA APLICADA",
+          "compras": 1,
+          "preco_mediano": 200.0,
+          "razao_vs_mediana": 1.549,
+          "desvio_percentual": 54.9
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 129.1,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 1,
+          "preco_mediano": 118.88,
+          "razao_vs_mediana": 0.921,
+          "desvio_percentual": -7.9
+        },
+        {
+          "orgao_cnpj": "04892707000100",
+          "orgao_nome": "DNIT-DEPARTAMENTO NACIONAL DE INFRAEST DE TRANSPORTES",
+          "compras": 1,
+          "preco_mediano": 10.0,
+          "razao_vs_mediana": 0.077,
+          "desvio_percentual": -92.3
+        }
+      ]
+    },
+    {
+      "chave_item": "VEICULO TRANSPORTE PESSOAL|UNIDADE",
+      "descricao": "VEICULO TRANSPORTE PESSOAL",
+      "descricao_exemplo": "Veículo Transporte Pessoal",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 21,
+      "observacoes_brutas": 21,
+      "orgaos": 4,
+      "preco_mediano": 172000.0,
+      "preco_minimo": 69700.0,
+      "preco_maximo": 392000.0,
+      "q1": 126990.0,
+      "q3": 290802.0,
+      "dispersao": 0.952,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 292646.0,
+          "razao_vs_mediana": 1.701,
+          "desvio_percentual": 70.1
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 10,
+          "preco_mediano": 244950.0,
+          "razao_vs_mediana": 1.424,
+          "desvio_percentual": 42.4
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 1,
+          "preco_mediano": 159274.0,
+          "razao_vs_mediana": 0.926,
+          "desvio_percentual": -7.4
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 8,
+          "preco_mediano": 126980.0,
+          "razao_vs_mediana": 0.738,
+          "desvio_percentual": -26.2
+        }
+      ]
+    },
+    {
+      "chave_item": "CARNE BOVINA IN NATURA|QUILOGRAMA",
+      "descricao": "CARNE BOVINA IN NATURA",
+      "descricao_exemplo": "Carne bovina in natura",
+      "unidade": "QUILOGRAMA",
+      "material_ou_servico": "M",
+      "observacoes": 19,
+      "observacoes_brutas": 23,
+      "orgaos": 4,
+      "preco_mediano": 21.46,
+      "preco_minimo": 13.9,
+      "preco_maximo": 26.73,
+      "q1": 18.68,
+      "q3": 21.93,
+      "dispersao": 0.192,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 12.4,
+          "quantidade": 40.0,
+          "orgao_nome": "COMANDO DA MARINHA",
+          "descricao_original": "Carne bovina in natura"
+        },
+        {
+          "valor_unitario": 31.9,
+          "quantidade": 680.0,
+          "orgao_nome": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE BRASILIA",
+          "descricao_original": "Carne bovina in natura"
+        },
+        {
+          "valor_unitario": 36.0,
+          "quantidade": 400.0,
+          "orgao_nome": "COMANDO DA MARINHA",
+          "descricao_original": "Carne bovina in natura"
+        },
+        {
+          "valor_unitario": 65.71,
+          "quantidade": 400.0,
+          "orgao_nome": "COMANDO DA MARINHA",
+          "descricao_original": "Carne bovina in natura"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 5,
+          "preco_mediano": 22.09,
+          "razao_vs_mediana": 1.029,
+          "desvio_percentual": 2.9
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 9,
+          "preco_mediano": 21.77,
+          "razao_vs_mediana": 1.014,
+          "desvio_percentual": 1.4
+        },
+        {
+          "orgao_cnpj": "10791831000182",
+          "orgao_nome": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE BRASILIA",
+          "compras": 4,
+          "preco_mediano": 18.7,
+          "razao_vs_mediana": 0.871,
+          "desvio_percentual": -12.9
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 13.9,
+          "razao_vs_mediana": 0.648,
+          "desvio_percentual": -35.2
+        }
+      ]
+    },
+    {
+      "chave_item": "PLACA HOMENAGEM|UNIDADE",
+      "descricao": "PLACA HOMENAGEM",
+      "descricao_exemplo": "Placa homenagem",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 19,
+      "observacoes_brutas": 23,
+      "orgaos": 4,
+      "preco_mediano": 88.0,
+      "preco_minimo": 22.98,
+      "preco_maximo": 285.0,
+      "q1": 52.0,
+      "q3": 133.99,
+      "dispersao": 1.387,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 930.0,
+          "quantidade": 4.0,
+          "orgao_nome": "CONSELHO REGIONAL DE CORRETORES DE IMOVEIS DA 8 REGIAO",
+          "descricao_original": "Placa homenagem"
+        },
+        {
+          "valor_unitario": 1114.0,
+          "quantidade": 3.0,
+          "orgao_nome": "AGENCIA NACIONAL DE TELECOMUNICACOES",
+          "descricao_original": "Placa Homenagem"
+        },
+        {
+          "valor_unitario": 1149.0,
+          "quantidade": 6.0,
+          "orgao_nome": "AGENCIA NACIONAL DE TELECOMUNICACOES",
+          "descricao_original": "Placa Homenagem"
+        },
+        {
+          "valor_unitario": 1549.0,
+          "quantidade": 10.0,
+          "orgao_nome": "AGENCIA NACIONAL DE TELECOMUNICACOES",
+          "descricao_original": "Placa Homenagem"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 285.0,
+          "razao_vs_mediana": 3.239,
+          "desvio_percentual": 223.9
+        },
+        {
+          "orgao_cnpj": "00105650000100",
+          "orgao_nome": "CONSELHO REGIONAL DE CORRETORES DE IMOVEIS DA 8 REGIAO",
+          "compras": 3,
+          "preco_mediano": 150.0,
+          "razao_vs_mediana": 1.705,
+          "desvio_percentual": 70.5
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 87.99,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": -0.0
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 14,
+          "preco_mediano": 70.69,
+          "razao_vs_mediana": 0.803,
+          "desvio_percentual": -19.7
+        }
+      ]
+    },
+    {
+      "chave_item": "PLACA IDENTIFICACAO|UNIDADE",
+      "descricao": "PLACA IDENTIFICACAO",
+      "descricao_exemplo": "Placa Identificação",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 12,
+      "orgaos": 4,
+      "preco_mediano": 92.5,
+      "preco_minimo": 0.38,
+      "preco_maximo": 150.0,
+      "q1": 62.98,
+      "q3": 98.75,
+      "dispersao": 0.665,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 1492.0,
+          "quantidade": 2.0,
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "descricao_original": "Placa identificação"
+        },
+        {
+          "valor_unitario": 1835.19,
+          "quantidade": 2.0,
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "descricao_original": "Placa identificação"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "37115383000153",
+          "orgao_nome": "MINISTERIO DE MINAS E ENERGIA",
+          "compras": 6,
+          "preco_mediano": 97.5,
+          "razao_vs_mediana": 1.054,
+          "desvio_percentual": 5.4
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 74.49,
+          "razao_vs_mediana": 0.805,
+          "desvio_percentual": -19.5
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 33.0,
+          "razao_vs_mediana": 0.357,
+          "desvio_percentual": -64.3
+        },
+        {
+          "orgao_cnpj": "01264142000129",
+          "orgao_nome": "MINISTERIO DA CULTURA",
+          "compras": 1,
+          "preco_mediano": 0.38,
+          "razao_vs_mediana": 0.004,
+          "desvio_percentual": -99.6
+        }
+      ]
+    },
+    {
+      "chave_item": "BATERIA ESTACIONARIA ALTA CAPACIDADE|UNIDADE",
+      "descricao": "BATERIA ESTACIONARIA ALTA CAPACIDADE",
+      "descricao_exemplo": "Bateria estacionária alta capacidade",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 12,
+      "orgaos": 4,
+      "preco_mediano": 591.0,
+      "preco_minimo": 52.97,
+      "preco_maximo": 1600.0,
+      "q1": 244.23,
+      "q3": 817.62,
+      "dispersao": 1.096,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 2256.97,
+          "quantidade": 2.0,
+          "orgao_nome": "SENADO FEDERAL",
+          "descricao_original": "Bateria Estacionária Alta Capacidade"
+        },
+        {
+          "valor_unitario": 25990.0,
+          "quantidade": 1.0,
+          "orgao_nome": "SENADO FEDERAL",
+          "descricao_original": "Bateria Estacionária Alta Capacidade"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "07421906000129",
+          "orgao_nome": "CONSELHO NACIONAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 830.0,
+          "razao_vs_mediana": 1.404,
+          "desvio_percentual": 40.4
+        },
+        {
+          "orgao_cnpj": "33683111000107",
+          "orgao_nome": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+          "compras": 5,
+          "preco_mediano": 800.0,
+          "razao_vs_mediana": 1.354,
+          "desvio_percentual": 35.4
+        },
+        {
+          "orgao_cnpj": "37115342000167",
+          "orgao_nome": "MINISTERIO DA INFRAESTRUTURA",
+          "compras": 1,
+          "preco_mediano": 730.0,
+          "razao_vs_mediana": 1.235,
+          "desvio_percentual": 23.5
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 178.97,
+          "razao_vs_mediana": 0.303,
+          "desvio_percentual": -69.7
+        }
+      ]
+    },
+    {
+      "chave_item": "CARTUCHO TONER IMPRESSORA HP|UNIDADE",
+      "descricao": "CARTUCHO TONER IMPRESSORA HP",
+      "descricao_exemplo": "Cartucho toner impressora hp",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 10,
+      "orgaos": 4,
+      "preco_mediano": 627.48,
+      "preco_minimo": 527.0,
+      "preco_maximo": 1700.0,
+      "q1": 527.0,
+      "q3": 1475.0,
+      "dispersao": 1.511,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 4,
+          "preco_mediano": 1700.0,
+          "razao_vs_mediana": 2.709,
+          "desvio_percentual": 170.9
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 659.95,
+          "razao_vs_mediana": 1.052,
+          "desvio_percentual": 5.2
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 595.0,
+          "razao_vs_mediana": 0.948,
+          "desvio_percentual": -5.2
+        },
+        {
+          "orgao_cnpj": "00038166000105",
+          "orgao_nome": "BANCO CENTRAL DO BRASIL",
+          "compras": 4,
+          "preco_mediano": 527.0,
+          "razao_vs_mediana": 0.84,
+          "desvio_percentual": -16.0
+        }
+      ]
+    },
+    {
+      "chave_item": "COPO DESCARTAVEL|PACOTE 100 00 UN",
+      "descricao": "COPO DESCARTAVEL",
+      "descricao_exemplo": "Copo Descartável",
+      "unidade": "PACOTE 100 00 UN",
+      "material_ou_servico": "M",
+      "observacoes": 9,
+      "observacoes_brutas": 10,
+      "orgaos": 4,
+      "preco_mediano": 3.59,
+      "preco_minimo": 1.5,
+      "preco_maximo": 8.5,
+      "q1": 3.5,
+      "q3": 5.47,
+      "dispersao": 0.662,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 62.0,
+          "quantidade": 450.0,
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "descricao_original": "Copo Descartável"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 8.5,
+          "razao_vs_mediana": 2.368,
+          "desvio_percentual": 136.8
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 6.01,
+          "razao_vs_mediana": 1.674,
+          "desvio_percentual": 67.4
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 5.47,
+          "razao_vs_mediana": 1.524,
+          "desvio_percentual": 52.4
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 6,
+          "preco_mediano": 3.5,
+          "razao_vs_mediana": 0.975,
+          "desvio_percentual": -2.5
+        }
+      ]
+    },
+    {
+      "chave_item": "GAVETA DISCO RIGIDO|UNIDADE",
+      "descricao": "GAVETA DISCO RIGIDO",
+      "descricao_exemplo": "Gaveta disco rígido",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 4,
+      "preco_mediano": 1649235.37,
+      "preco_minimo": 40.25,
+      "preco_maximo": 3140200.0,
+      "q1": 840451.0,
+      "q3": 2384287.11,
+      "dispersao": 0.936,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "26994558000123",
+          "orgao_nome": "ADVOCACIA GERAL DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 2186720.58,
+          "razao_vs_mediana": 1.326,
+          "desvio_percentual": 32.6
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 3,
+          "preco_mediano": 2160726.0,
+          "razao_vs_mediana": 1.31,
+          "desvio_percentual": 31.0
+        },
+        {
+          "orgao_cnpj": "04039532000193",
+          "orgao_nome": "INSTITUTO NACIONAL DE TECNOLOGIA DA INFORMACAO",
+          "compras": 2,
+          "preco_mediano": 711510.0,
+          "razao_vs_mediana": 0.431,
+          "desvio_percentual": -56.9
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 40.25,
+          "razao_vs_mediana": 0.0,
+          "desvio_percentual": -100.0
+        }
+      ]
+    },
+    {
+      "chave_item": "XICARA|UNIDADE",
+      "descricao": "XICARA",
+      "descricao_exemplo": "Xícara",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 4,
+      "preco_mediano": 14.23,
+      "preco_minimo": 8.71,
+      "preco_maximo": 24.51,
+      "q1": 13.88,
+      "q3": 19.28,
+      "dispersao": 0.379,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 19.35,
+          "razao_vs_mediana": 1.359,
+          "desvio_percentual": 35.9
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 2,
+          "preco_mediano": 15.91,
+          "razao_vs_mediana": 1.117,
+          "desvio_percentual": 11.7
+        },
+        {
+          "orgao_cnpj": "00509968000148",
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "compras": 1,
+          "preco_mediano": 12.95,
+          "razao_vs_mediana": 0.91,
+          "desvio_percentual": -9.0
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 8.71,
+          "razao_vs_mediana": 0.612,
+          "desvio_percentual": -38.8
+        }
+      ]
+    },
+    {
+      "chave_item": "ETIQUETA PROTETORA ELETROMAGNETICA|UNIDADE",
+      "descricao": "ETIQUETA PROTETORA ELETROMAGNETICA",
+      "descricao_exemplo": "Etiqueta Protetora Eletromagnética",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 4,
+      "preco_mediano": 4.09,
+      "preco_minimo": 1.28,
+      "preco_maximo": 8.5,
+      "q1": 2.27,
+      "q3": 5.3,
+      "dispersao": 0.742,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 6.09,
+          "razao_vs_mediana": 1.489,
+          "desvio_percentual": 48.9
+        },
+        {
+          "orgao_cnpj": "01263896000164",
+          "orgao_nome": "MINISTERIO DA CIENCIA, TECNOLOGIA E INOVACOES",
+          "compras": 2,
+          "preco_mediano": 2.95,
+          "razao_vs_mediana": 0.721,
+          "desvio_percentual": -27.9
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 2.52,
+          "razao_vs_mediana": 0.616,
+          "desvio_percentual": -38.4
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 1.28,
+          "razao_vs_mediana": 0.313,
+          "desvio_percentual": -68.7
+        }
+      ]
+    },
+    {
+      "chave_item": "ALCOOL ETILICO|LITRO",
+      "descricao": "ALCOOL ETILICO",
+      "descricao_exemplo": "Álcool etílico",
+      "unidade": "LITRO",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 9,
+      "orgaos": 4,
+      "preco_mediano": 5.22,
+      "preco_minimo": 4.4,
+      "preco_maximo": 12.9,
+      "q1": 4.5,
+      "q3": 7.79,
+      "dispersao": 0.651,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 27.44,
+          "quantidade": 600.0,
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "descricao_original": "Álcool etílico"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 8.65,
+          "razao_vs_mediana": 1.657,
+          "desvio_percentual": 65.7
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 7.9,
+          "razao_vs_mediana": 1.513,
+          "desvio_percentual": 51.3
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 2,
+          "preco_mediano": 6.38,
+          "razao_vs_mediana": 1.221,
+          "desvio_percentual": 22.1
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 4.5,
+          "razao_vs_mediana": 0.862,
+          "desvio_percentual": -13.8
+        }
+      ]
+    },
+    {
+      "chave_item": "FITA ADESIVA|UNIDADE",
+      "descricao": "FITA ADESIVA",
+      "descricao_exemplo": "Fita Adesiva",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 4,
+      "preco_mediano": 22.99,
+      "preco_minimo": 2.55,
+      "preco_maximo": 51.6,
+      "q1": 17.16,
+      "q3": 35.49,
+      "dispersao": 0.797,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "04903587000108",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES AQUAVIARIOS",
+          "compras": 1,
+          "preco_mediano": 51.6,
+          "razao_vs_mediana": 2.244,
+          "desvio_percentual": 124.4
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 31.48,
+          "razao_vs_mediana": 1.37,
+          "desvio_percentual": 37.0
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 31.0,
+          "razao_vs_mediana": 1.348,
+          "desvio_percentual": 34.8
+        },
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 3,
+          "preco_mediano": 14.97,
+          "razao_vs_mediana": 0.651,
+          "desvio_percentual": -34.9
+        }
+      ]
+    },
+    {
+      "chave_item": "AGUA MINERAL NATURAL|GARRAFA 500 ML",
+      "descricao": "AGUA MINERAL NATURAL",
+      "descricao_exemplo": "Água mineral natural",
+      "unidade": "GARRAFA 500 ML",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 4,
+      "preco_mediano": 0.97,
+      "preco_minimo": 0.61,
+      "preco_maximo": 1.21,
+      "q1": 0.83,
+      "q3": 1.08,
+      "dispersao": 0.258,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 1.21,
+          "razao_vs_mediana": 1.247,
+          "desvio_percentual": 24.7
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 1.08,
+          "razao_vs_mediana": 1.113,
+          "desvio_percentual": 11.3
+        },
+        {
+          "orgao_cnpj": "03658507000125",
+          "orgao_nome": "TRIBUNAL REGIONAL FEDERAL DA 1 REGIAO",
+          "compras": 2,
+          "preco_mediano": 0.89,
+          "razao_vs_mediana": 0.918,
+          "desvio_percentual": -8.2
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 2,
+          "preco_mediano": 0.74,
+          "razao_vs_mediana": 0.763,
+          "desvio_percentual": -23.7
+        }
+      ]
+    },
+    {
+      "chave_item": "ACUCAR|EMBALAGEM 5 KG",
+      "descricao": "ACUCAR",
+      "descricao_exemplo": "Açúcar",
+      "unidade": "EMBALAGEM 5 KG",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 4,
+      "preco_mediano": 16.95,
+      "preco_minimo": 13.67,
+      "preco_maximo": 22.6,
+      "q1": 15.58,
+      "q3": 18.7,
+      "dispersao": 0.184,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "86900545000170",
+          "orgao_nome": "AGENCIA ESPACIAL BRASILEIRA - AEB",
+          "compras": 1,
+          "preco_mediano": 22.6,
+          "razao_vs_mediana": 1.333,
+          "desvio_percentual": 33.3
+        },
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 18.97,
+          "razao_vs_mediana": 1.119,
+          "desvio_percentual": 11.9
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 16.95,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 14.55,
+          "razao_vs_mediana": 0.858,
+          "desvio_percentual": -14.2
+        }
+      ]
+    },
+    {
+      "chave_item": "CADEIRA|UNIDADE",
+      "descricao": "CADEIRA",
+      "descricao_exemplo": "Cadeira",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 4,
+      "preco_mediano": 729.0,
+      "preco_minimo": 189.0,
+      "preco_maximo": 1324.0,
+      "q1": 341.25,
+      "q3": 963.75,
+      "dispersao": 0.854,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 1161.5,
+          "razao_vs_mediana": 1.593,
+          "desvio_percentual": 59.3
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 858.0,
+          "razao_vs_mediana": 1.177,
+          "desvio_percentual": 17.7
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 394.5,
+          "razao_vs_mediana": 0.541,
+          "desvio_percentual": -45.9
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 255.0,
+          "razao_vs_mediana": 0.35,
+          "desvio_percentual": -65.0
+        }
+      ]
+    },
+    {
+      "chave_item": "ACUCAR|EMBALAGEM 5 00 KG",
+      "descricao": "ACUCAR",
+      "descricao_exemplo": "Açúcar",
+      "unidade": "EMBALAGEM 5 00 KG",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 4,
+      "preco_mediano": 9.96,
+      "preco_minimo": 3.1,
+      "preco_maximo": 18.2,
+      "q1": 3.32,
+      "q3": 17.24,
+      "dispersao": 1.398,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 1,
+          "preco_mediano": 18.2,
+          "razao_vs_mediana": 1.828,
+          "desvio_percentual": 82.8
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 17.48,
+          "razao_vs_mediana": 1.756,
+          "desvio_percentual": 75.6
+        },
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 16.52,
+          "razao_vs_mediana": 1.659,
+          "desvio_percentual": 65.9
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 3.3,
+          "razao_vs_mediana": 0.331,
+          "desvio_percentual": -66.9
+        }
+      ]
+    },
+    {
+      "chave_item": "COPO|UNIDADE",
+      "descricao": "COPO",
+      "descricao_exemplo": "Copo",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 6,
+      "orgaos": 4,
+      "preco_mediano": 4.4,
+      "preco_minimo": 1.66,
+      "preco_maximo": 5.93,
+      "q1": 2.7,
+      "q3": 5.09,
+      "dispersao": 0.59,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 31.2,
+          "quantidade": 100.0,
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "descricao_original": "Copo"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 5.93,
+          "razao_vs_mediana": 1.348,
+          "desvio_percentual": 34.8
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 4.75,
+          "razao_vs_mediana": 1.078,
+          "desvio_percentual": 7.8
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 2.7,
+          "razao_vs_mediana": 0.614,
+          "desvio_percentual": -38.6
+        },
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 1.66,
+          "razao_vs_mediana": 0.377,
+          "desvio_percentual": -62.3
+        }
+      ]
+    },
+    {
+      "chave_item": "TECLADO MICROCOMPUTADOR|UNIDADE",
+      "descricao": "TECLADO MICROCOMPUTADOR",
+      "descricao_exemplo": "Teclado microcomputador",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 6,
+      "orgaos": 4,
+      "preco_mediano": 60.0,
+      "preco_minimo": 17.01,
+      "preco_maximo": 123.0,
+      "q1": 21.99,
+      "q3": 74.99,
+      "dispersao": 1.325,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 1365000.0,
+          "quantidade": 1.0,
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "descricao_original": "Teclado microcomputador"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 2,
+          "preco_mediano": 99.0,
+          "razao_vs_mediana": 1.65,
+          "desvio_percentual": 65.0
+        },
+        {
+          "orgao_cnpj": "07290290000102",
+          "orgao_nome": "SUPERINTENDENCIA NACIONAL DE PREVIDENCIA COMPLEMENTAR",
+          "compras": 1,
+          "preco_mediano": 60.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 21.99,
+          "razao_vs_mediana": 0.366,
+          "desvio_percentual": -63.3
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 17.01,
+          "razao_vs_mediana": 0.284,
+          "desvio_percentual": -71.6
+        }
+      ]
+    },
+    {
+      "chave_item": "UMIDIFICADOR E PURIFICADOR AMBIENTE|UNIDADE",
+      "descricao": "UMIDIFICADOR E PURIFICADOR AMBIENTE",
+      "descricao_exemplo": "Umidificador e purificador ambiente",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 4,
+      "preco_mediano": 180.0,
+      "preco_minimo": 129.95,
+      "preco_maximo": 225.42,
+      "q1": 149.9,
+      "q3": 186.2,
+      "dispersao": 0.202,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 225.42,
+          "razao_vs_mediana": 1.252,
+          "desvio_percentual": 25.2
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 183.1,
+          "razao_vs_mediana": 1.017,
+          "desvio_percentual": 1.7
+        },
+        {
+          "orgao_cnpj": "02270669000129",
+          "orgao_nome": "AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL",
+          "compras": 1,
+          "preco_mediano": 149.9,
+          "razao_vs_mediana": 0.833,
+          "desvio_percentual": -16.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 129.95,
+          "razao_vs_mediana": 0.722,
+          "desvio_percentual": -27.8
+        }
+      ]
+    },
+    {
+      "chave_item": "CAMERA FOTOGRAFICA DIGITAL|UNIDADE",
+      "descricao": "CAMERA FOTOGRAFICA DIGITAL",
+      "descricao_exemplo": "Câmera Fotográfica Digital",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 4,
+      "preco_mediano": 8500.0,
+      "preco_minimo": 2890.0,
+      "preco_maximo": 19849.99,
+      "q1": 8100.0,
+      "q3": 15448.95,
+      "dispersao": 0.865,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 1,
+          "preco_mediano": 15448.95,
+          "razao_vs_mediana": 1.818,
+          "desvio_percentual": 81.8
+        },
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 2,
+          "preco_mediano": 11370.0,
+          "razao_vs_mediana": 1.338,
+          "desvio_percentual": 33.8
+        },
+        {
+          "orgao_cnpj": "29406625000130",
+          "orgao_nome": "AGENCIA NACIONAL DE MINERACAO",
+          "compras": 1,
+          "preco_mediano": 8500.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "27136980000100",
+          "orgao_nome": "MINISTERIO DA MULHER, DA FAMILIA E DOS DIREITOS HUMANOS",
+          "compras": 1,
+          "preco_mediano": 8100.0,
+          "razao_vs_mediana": 0.953,
+          "desvio_percentual": -4.7
+        }
+      ]
+    },
+    {
+      "chave_item": "DIVISORIA|METRO QUADRADO",
+      "descricao": "DIVISORIA",
+      "descricao_exemplo": "Divisória",
+      "unidade": "METRO QUADRADO",
+      "material_ou_servico": "M",
+      "observacoes": 18,
+      "observacoes_brutas": 18,
+      "orgaos": 3,
+      "preco_mediano": 603.5,
+      "preco_minimo": 58.0,
+      "preco_maximo": 1290.0,
+      "q1": 461.75,
+      "q3": 847.5,
+      "dispersao": 0.639,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "01678363000143",
+          "orgao_nome": "INSTITUTO NACIONAL DE ESTUDOS E PESQUISAS EDUCACIONAIS ANISIO TEIXEIRA",
+          "compras": 4,
+          "preco_mediano": 759.41,
+          "razao_vs_mediana": 1.258,
+          "desvio_percentual": 25.8
+        },
+        {
+          "orgao_cnpj": "00531954000120",
+          "orgao_nome": "TRIBUNAL DE JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS",
+          "compras": 11,
+          "preco_mediano": 716.0,
+          "razao_vs_mediana": 1.186,
+          "desvio_percentual": 18.6
+        },
+        {
+          "orgao_cnpj": "03658507000125",
+          "orgao_nome": "TRIBUNAL REGIONAL FEDERAL DA 1 REGIAO",
+          "compras": 3,
+          "preco_mediano": 507.0,
+          "razao_vs_mediana": 0.84,
+          "desvio_percentual": -16.0
+        }
+      ]
+    },
+    {
+      "chave_item": "FLOR NATURAL|UNIDADE",
+      "descricao": "FLOR NATURAL",
+      "descricao_exemplo": "Flor Natural",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 16,
+      "observacoes_brutas": 18,
+      "orgaos": 3,
+      "preco_mediano": 205.0,
+      "preco_minimo": 78.0,
+      "preco_maximo": 900.0,
+      "q1": 147.5,
+      "q3": 400.0,
+      "dispersao": 1.524,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 952.0,
+          "quantidade": 12.0,
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "descricao_original": "Flor natural"
+        },
+        {
+          "valor_unitario": 359578.0,
+          "quantidade": 1.0,
+          "orgao_nome": "TRIBUNAL SUPERIOR DO TRABALHO",
+          "descricao_original": "Flor natural"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 8,
+          "preco_mediano": 400.0,
+          "razao_vs_mediana": 1.951,
+          "desvio_percentual": 95.1
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 6,
+          "preco_mediano": 175.0,
+          "razao_vs_mediana": 0.854,
+          "desvio_percentual": -14.6
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 2,
+          "preco_mediano": 88.27,
+          "razao_vs_mediana": 0.431,
+          "desvio_percentual": -56.9
+        }
+      ]
+    },
+    {
+      "chave_item": "FIO DE SUTURA AGULHADO|UNIDADE",
+      "descricao": "FIO DE SUTURA AGULHADO",
+      "descricao_exemplo": "Fio De Sutura Agulhado",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 15,
+      "observacoes_brutas": 15,
+      "orgaos": 3,
+      "preco_mediano": 8.7,
+      "preco_minimo": 1.46,
+      "preco_maximo": 18.7,
+      "q1": 2.77,
+      "q3": 10.23,
+      "dispersao": 0.857,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 8,
+          "preco_mediano": 9.38,
+          "razao_vs_mediana": 1.078,
+          "desvio_percentual": 7.8
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 7.9,
+          "razao_vs_mediana": 0.908,
+          "desvio_percentual": -9.2
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 6,
+          "preco_mediano": 1.62,
+          "razao_vs_mediana": 0.187,
+          "desvio_percentual": -81.3
+        }
+      ]
+    },
+    {
+      "chave_item": "PINCEL QUADRO BRANCO MAGNETICO|UNIDADE",
+      "descricao": "PINCEL QUADRO BRANCO MAGNETICO",
+      "descricao_exemplo": "Pincel quadro branco , magnético",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 11,
+      "observacoes_brutas": 11,
+      "orgaos": 3,
+      "preco_mediano": 2.49,
+      "preco_minimo": 1.35,
+      "preco_maximo": 3.71,
+      "q1": 2.11,
+      "q3": 3.13,
+      "dispersao": 0.412,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "10791831000182",
+          "orgao_nome": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE BRASILIA",
+          "compras": 6,
+          "preco_mediano": 2.91,
+          "razao_vs_mediana": 1.169,
+          "desvio_percentual": 16.9
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 2.53,
+          "razao_vs_mediana": 1.016,
+          "desvio_percentual": 1.6
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 1.35,
+          "razao_vs_mediana": 0.542,
+          "desvio_percentual": -45.8
+        }
+      ]
+    },
+    {
+      "chave_item": "LENTE PARA CAMERA FOTOGRAFICA|UNIDADE",
+      "descricao": "LENTE PARA CAMERA FOTOGRAFICA",
+      "descricao_exemplo": "Lente Para Câmera Fotográfica",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 11,
+      "observacoes_brutas": 12,
+      "orgaos": 3,
+      "preco_mediano": 10937.62,
+      "preco_minimo": 4096.18,
+      "preco_maximo": 21649.0,
+      "q1": 7501.36,
+      "q3": 12922.5,
+      "dispersao": 0.546,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 76790.0,
+          "quantidade": 1.0,
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "descricao_original": "Lente Para Câmera Fotográfica"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00531640000128",
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "compras": 4,
+          "preco_mediano": 12922.5,
+          "razao_vs_mediana": 1.181,
+          "desvio_percentual": 18.1
+        },
+        {
+          "orgao_cnpj": "04898488000177",
+          "orgao_nome": "AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT",
+          "compras": 4,
+          "preco_mediano": 9153.37,
+          "razao_vs_mediana": 0.837,
+          "desvio_percentual": -16.3
+        },
+        {
+          "orgao_cnpj": "27136980000100",
+          "orgao_nome": "MINISTERIO DA MULHER, DA FAMILIA E DOS DIREITOS HUMANOS",
+          "compras": 3,
+          "preco_mediano": 7633.6,
+          "razao_vs_mediana": 0.698,
+          "desvio_percentual": -30.2
+        }
+      ]
+    },
+    {
+      "chave_item": "VESTUARIO PROTECAO|UNIDADE",
+      "descricao": "VESTUARIO PROTECAO",
+      "descricao_exemplo": "Vestuário proteção",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 10,
+      "orgaos": 3,
+      "preco_mediano": 385.0,
+      "preco_minimo": 9.7,
+      "preco_maximo": 1029.36,
+      "q1": 385.0,
+      "q3": 825.87,
+      "dispersao": 1.145,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 5,
+          "preco_mediano": 894.42,
+          "razao_vs_mediana": 2.323,
+          "desvio_percentual": 132.3
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 385.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 180.0,
+          "razao_vs_mediana": 0.468,
+          "desvio_percentual": -53.2
+        }
+      ]
+    },
+    {
+      "chave_item": "PECAS E ACESSORIOS APARELHO AR CONDICIONADO|UNIDADE",
+      "descricao": "PECAS E ACESSORIOS APARELHO AR CONDICIONADO",
+      "descricao_exemplo": "Peças e acessórios aparelho ar condicionado",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 10,
+      "observacoes_brutas": 11,
+      "orgaos": 3,
+      "preco_mediano": 24676.29,
+      "preco_minimo": 212.3,
+      "preco_maximo": 41426.0,
+      "q1": 3187.18,
+      "q3": 38750.0,
+      "dispersao": 1.399,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 311889.34,
+          "quantidade": 1.0,
+          "orgao_nome": "COMANDO DA MARINHA",
+          "descricao_original": "Peças E Acessórios Aparelho Ar Condicionado"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "26994558000123",
+          "orgao_nome": "ADVOCACIA GERAL DA UNIAO",
+          "compras": 3,
+          "preco_mediano": 41426.0,
+          "razao_vs_mediana": 1.679,
+          "desvio_percentual": 67.9
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 6,
+          "preco_mediano": 12412.17,
+          "razao_vs_mediana": 0.503,
+          "desvio_percentual": -49.7
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 688.3,
+          "razao_vs_mediana": 0.028,
+          "desvio_percentual": -97.2
+        }
+      ]
+    },
+    {
+      "chave_item": "EQUIPAMENTO ODONTOLOGICO|UNIDADE",
+      "descricao": "EQUIPAMENTO ODONTOLOGICO",
+      "descricao_exemplo": "Equipamento Odontológico",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 9,
+      "observacoes_brutas": 10,
+      "orgaos": 3,
+      "preco_mediano": 4000.0,
+      "preco_minimo": 734.93,
+      "preco_maximo": 11694.8,
+      "q1": 1700.0,
+      "q3": 7142.86,
+      "dispersao": 1.464,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 25871.54,
+          "quantidade": 1.0,
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "descricao_original": "Equipamento Odontológico"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00531640000128",
+          "orgao_nome": "SUPREMO TRIBUNAL FEDERAL",
+          "compras": 1,
+          "preco_mediano": 4178.0,
+          "razao_vs_mediana": 1.044,
+          "desvio_percentual": 4.4
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 5,
+          "preco_mediano": 4000.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 3,
+          "preco_mediano": 1725.0,
+          "razao_vs_mediana": 0.431,
+          "desvio_percentual": -56.9
+        }
+      ]
+    },
+    {
+      "chave_item": "APARELHO EQUIPAMENTO PARA CONDICIONAMENTO FISICO|UNIDADE",
+      "descricao": "APARELHO EQUIPAMENTO PARA CONDICIONAMENTO FISICO",
+      "descricao_exemplo": "Aparelho / equipamento para condicionamento físico",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 8,
+      "orgaos": 3,
+      "preco_mediano": 3400.0,
+      "preco_minimo": 105.44,
+      "preco_maximo": 8500.0,
+      "q1": 1295.11,
+      "q3": 7720.51,
+      "dispersao": 1.89,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00627612000109",
+          "orgao_nome": "FUNDACAO ESCOLA NACIONAL DE ADMINISTRACAO PUBLICA",
+          "compras": 2,
+          "preco_mediano": 7797.24,
+          "razao_vs_mediana": 2.293,
+          "desvio_percentual": 129.3
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 4,
+          "preco_mediano": 3400.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 287.94,
+          "razao_vs_mediana": 0.085,
+          "desvio_percentual": -91.5
+        }
+      ]
+    },
+    {
+      "chave_item": "BANDEIRA INSTITUCIONAL|UNIDADE",
+      "descricao": "BANDEIRA INSTITUCIONAL",
+      "descricao_exemplo": "Bandeira Institucional",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 8,
+      "observacoes_brutas": 9,
+      "orgaos": 3,
+      "preco_mediano": 351.59,
+      "preco_minimo": 70.0,
+      "preco_maximo": 1045.5,
+      "q1": 77.5,
+      "q3": 512.54,
+      "dispersao": 1.422,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 4300.0,
+          "quantidade": 1.0,
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "descricao_original": "Bandeira Institucional"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 5,
+          "preco_mediano": 490.05,
+          "razao_vs_mediana": 1.394,
+          "desvio_percentual": 39.4
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 80.0,
+          "razao_vs_mediana": 0.228,
+          "desvio_percentual": -77.2
+        },
+        {
+          "orgao_cnpj": "00038166000105",
+          "orgao_nome": "BANCO CENTRAL DO BRASIL",
+          "compras": 2,
+          "preco_mediano": 70.0,
+          "razao_vs_mediana": 0.199,
+          "desvio_percentual": -80.1
+        }
+      ]
+    },
+    {
+      "chave_item": "PRATO|UNIDADE",
+      "descricao": "PRATO",
+      "descricao_exemplo": "Prato",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 8,
+      "orgaos": 3,
+      "preco_mediano": 15.69,
+      "preco_minimo": 3.5,
+      "preco_maximo": 43.51,
+      "q1": 13.2,
+      "q3": 25.31,
+      "dispersao": 1.164,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 1289.0,
+          "quantidade": 190.0,
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "descricao_original": "Prato"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 4,
+          "preco_mediano": 25.31,
+          "razao_vs_mediana": 1.613,
+          "desvio_percentual": 61.3
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 2,
+          "preco_mediano": 15.69,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394494000136",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 1,
+          "preco_mediano": 3.5,
+          "razao_vs_mediana": 0.223,
+          "desvio_percentual": -77.7
+        }
+      ]
+    },
+    {
+      "chave_item": "BOTA SEGURANCA|PAR",
+      "descricao": "BOTA SEGURANCA",
+      "descricao_exemplo": "Bota segurança",
+      "unidade": "PAR",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 9,
+      "orgaos": 3,
+      "preco_mediano": 37.95,
+      "preco_minimo": 31.0,
+      "preco_maximo": 46.26,
+      "q1": 31.0,
+      "q3": 46.26,
+      "dispersao": 0.402,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 70.0,
+          "quantidade": 5.0,
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "descricao_original": "Bota segurança"
+        },
+        {
+          "valor_unitario": 575.0,
+          "quantidade": 4.0,
+          "orgao_nome": "SENADO FEDERAL",
+          "descricao_original": "Bota Segurança"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 46.26,
+          "razao_vs_mediana": 1.219,
+          "desvio_percentual": 21.9
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 1,
+          "preco_mediano": 31.0,
+          "razao_vs_mediana": 0.817,
+          "desvio_percentual": -18.3
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 3,
+          "preco_mediano": 31.0,
+          "razao_vs_mediana": 0.817,
+          "desvio_percentual": -18.3
+        }
+      ]
+    },
+    {
+      "chave_item": "BLOCO RASCUNHO|UNIDADE",
+      "descricao": "BLOCO RASCUNHO",
+      "descricao_exemplo": "Bloco Rascunho",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 3,
+      "preco_mediano": 5.95,
+      "preco_minimo": 2.97,
+      "preco_maximo": 11.5,
+      "q1": 3.71,
+      "q3": 9.0,
+      "dispersao": 0.889,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 11.5,
+          "razao_vs_mediana": 1.933,
+          "desvio_percentual": 93.3
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 4,
+          "preco_mediano": 6.97,
+          "razao_vs_mediana": 1.172,
+          "desvio_percentual": 17.2
+        },
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 2,
+          "preco_mediano": 2.97,
+          "razao_vs_mediana": 0.499,
+          "desvio_percentual": -50.1
+        }
+      ]
+    },
+    {
+      "chave_item": "CAMISA MASCULINA|UNIDADE",
+      "descricao": "CAMISA MASCULINA",
+      "descricao_exemplo": "Camisa masculina",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 8,
+      "orgaos": 3,
+      "preco_mediano": 41.99,
+      "preco_minimo": 23.99,
+      "preco_maximo": 93.38,
+      "q1": 31.39,
+      "q3": 51.0,
+      "dispersao": 0.792,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 145.0,
+          "quantidade": 70.0,
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "descricao_original": "Camisa masculina"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 93.38,
+          "razao_vs_mediana": 2.224,
+          "desvio_percentual": 122.4
+        },
+        {
+          "orgao_cnpj": "03277610000125",
+          "orgao_nome": "MINISTERIO DA DEFESA",
+          "compras": 1,
+          "preco_mediano": 60.0,
+          "razao_vs_mediana": 1.429,
+          "desvio_percentual": 42.9
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 5,
+          "preco_mediano": 38.79,
+          "razao_vs_mediana": 0.924,
+          "desvio_percentual": -7.6
+        }
+      ]
+    },
+    {
+      "chave_item": "OCULOS PROTECAO|UNIDADE",
+      "descricao": "OCULOS PROTECAO",
+      "descricao_exemplo": "Óculos Proteção",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 3,
+      "preco_mediano": 5.95,
+      "preco_minimo": 2.69,
+      "preco_maximo": 13.81,
+      "q1": 3.25,
+      "q3": 7.75,
+      "dispersao": 0.756,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 8.25,
+          "razao_vs_mediana": 1.387,
+          "desvio_percentual": 38.7
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 5.95,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "03659166001931",
+          "orgao_nome": "INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVAVEIS-IBAMA",
+          "compras": 4,
+          "preco_mediano": 4.65,
+          "razao_vs_mediana": 0.782,
+          "desvio_percentual": -21.8
+        }
+      ]
+    },
+    {
+      "chave_item": "AREIA|METRO CUBICO",
+      "descricao": "AREIA",
+      "descricao_exemplo": "Areia",
+      "unidade": "METRO CUBICO",
+      "material_ou_servico": "M",
+      "observacoes": 7,
+      "observacoes_brutas": 7,
+      "orgaos": 3,
+      "preco_mediano": 118.0,
+      "preco_minimo": 74.5,
+      "preco_maximo": 190.0,
+      "q1": 91.25,
+      "q3": 172.5,
+      "dispersao": 0.689,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 2,
+          "preco_mediano": 190.0,
+          "razao_vs_mediana": 1.61,
+          "desvio_percentual": 61.0
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 113.0,
+          "razao_vs_mediana": 0.958,
+          "desvio_percentual": -4.2
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 3,
+          "preco_mediano": 74.5,
+          "razao_vs_mediana": 0.631,
+          "desvio_percentual": -36.9
+        }
+      ]
+    },
+    {
+      "chave_item": "TOMADA|UNIDADE",
+      "descricao": "TOMADA",
+      "descricao_exemplo": "Tomada",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 3,
+      "preco_mediano": 6.35,
+      "preco_minimo": 0.72,
+      "preco_maximo": 9.98,
+      "q1": 5.02,
+      "q3": 9.1,
+      "dispersao": 0.642,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 2,
+          "preco_mediano": 7.3,
+          "razao_vs_mediana": 1.15,
+          "desvio_percentual": 15.0
+        },
+        {
+          "orgao_cnpj": "00530279000115",
+          "orgao_nome": "SENADO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 7.0,
+          "razao_vs_mediana": 1.102,
+          "desvio_percentual": 10.2
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 3,
+          "preco_mediano": 5.7,
+          "razao_vs_mediana": 0.898,
+          "desvio_percentual": -10.2
+        }
+      ]
+    },
+    {
+      "chave_item": "TELA PROJECAO|UNIDADE",
+      "descricao": "TELA PROJECAO",
+      "descricao_exemplo": "Tela Projeção",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 6,
+      "orgaos": 3,
+      "preco_mediano": 909.5,
+      "preco_minimo": 479.9,
+      "preco_maximo": 2000.0,
+      "q1": 589.38,
+      "q3": 1199.93,
+      "dispersao": 0.671,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 2,
+          "preco_mediano": 1465.0,
+          "razao_vs_mediana": 1.611,
+          "desvio_percentual": 61.1
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 1289.9,
+          "razao_vs_mediana": 1.418,
+          "desvio_percentual": 41.8
+        },
+        {
+          "orgao_cnpj": "10791831000182",
+          "orgao_nome": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE BRASILIA",
+          "compras": 3,
+          "preco_mediano": 489.5,
+          "razao_vs_mediana": 0.538,
+          "desvio_percentual": -46.2
+        }
+      ]
+    },
+    {
+      "chave_item": "ALCOOL ETILICO|FRASCO 500 00 ML",
+      "descricao": "ALCOOL ETILICO",
+      "descricao_exemplo": "Álcool Etílico",
+      "unidade": "FRASCO 500 00 ML",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 7,
+      "orgaos": 3,
+      "preco_mediano": 3.35,
+      "preco_minimo": 3.35,
+      "preco_maximo": 3.95,
+      "q1": 3.35,
+      "q3": 3.75,
+      "dispersao": 0.17,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 8.03,
+          "quantidade": 2.0,
+          "orgao_nome": "CONSELHO REGIONAL DE CORRETORES DE IMOVEIS DA 8 REGIAO",
+          "descricao_original": "Álcool Etílico"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 3.95,
+          "razao_vs_mediana": 1.179,
+          "desvio_percentual": 17.9
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 1,
+          "preco_mediano": 3.89,
+          "razao_vs_mediana": 1.161,
+          "desvio_percentual": 16.1
+        },
+        {
+          "orgao_cnpj": "00394684000153",
+          "orgao_nome": "SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL",
+          "compras": 4,
+          "preco_mediano": 3.35,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        }
+      ]
+    },
+    {
+      "chave_item": "QUADRO BRANCO|UNIDADE",
+      "descricao": "QUADRO BRANCO",
+      "descricao_exemplo": "Quadro branco",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 6,
+      "observacoes_brutas": 7,
+      "orgaos": 3,
+      "preco_mediano": 724.42,
+      "preco_minimo": 80.4,
+      "preco_maximo": 1300.0,
+      "q1": 290.0,
+      "q3": 1023.21,
+      "dispersao": 1.089,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 2449.9,
+          "quantidade": 64.0,
+          "orgao_nome": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE BRASILIA",
+          "descricao_original": "Quadro branco"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "33781055000135",
+          "orgao_nome": "FUNDACAO OSWALDO CRUZ",
+          "compras": 1,
+          "preco_mediano": 1098.0,
+          "razao_vs_mediana": 1.516,
+          "desvio_percentual": 51.6
+        },
+        {
+          "orgao_cnpj": "10791831000182",
+          "orgao_nome": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE BRASILIA",
+          "compras": 4,
+          "preco_mediano": 724.42,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "26474056000171",
+          "orgao_nome": "INSTITUTO DO PATRIMONIO HISTORICO E ARTISTICO NACIONAL",
+          "compras": 1,
+          "preco_mediano": 170.0,
+          "razao_vs_mediana": 0.235,
+          "desvio_percentual": -76.5
+        }
+      ]
+    },
+    {
+      "chave_item": "BOTIJAO PARA GAS|UNIDADE",
+      "descricao": "BOTIJAO PARA GAS",
+      "descricao_exemplo": "Botijão Para Gás",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 6,
+      "orgaos": 3,
+      "preco_mediano": 140.0,
+      "preco_minimo": 133.0,
+      "preco_maximo": 219.0,
+      "q1": 140.0,
+      "q3": 140.0,
+      "dispersao": 0.423,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 467.0,
+          "quantidade": 70.0,
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "descricao_original": "Botijão Para Gás"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 176.0,
+          "razao_vs_mediana": 1.257,
+          "desvio_percentual": 25.7
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 2,
+          "preco_mediano": 140.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394502000144",
+          "orgao_nome": "COMANDO DA MARINHA",
+          "compras": 1,
+          "preco_mediano": 140.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        }
+      ]
+    },
+    {
+      "chave_item": "ARMARIO ACO|UNIDADE",
+      "descricao": "ARMARIO ACO",
+      "descricao_exemplo": "Armário aço",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 6,
+      "orgaos": 3,
+      "preco_mediano": 1200.0,
+      "preco_minimo": 769.0,
+      "preco_maximo": 1850.0,
+      "q1": 1040.0,
+      "q3": 1680.0,
+      "dispersao": 0.606,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 4180.0,
+          "quantidade": 2.0,
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "descricao_original": "Armário aço"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 3,
+          "preco_mediano": 1680.0,
+          "razao_vs_mediana": 1.4,
+          "desvio_percentual": 40.0
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 1,
+          "preco_mediano": 1200.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 1,
+          "preco_mediano": 769.0,
+          "razao_vs_mediana": 0.641,
+          "desvio_percentual": -35.9
+        }
+      ]
+    },
+    {
+      "chave_item": "AGENDA|UNIDADE",
+      "descricao": "AGENDA",
+      "descricao_exemplo": "Agenda",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 3,
+      "preco_mediano": 28.98,
+      "preco_minimo": 3.0,
+      "preco_maximo": 33.9,
+      "q1": 19.16,
+      "q3": 32.8,
+      "dispersao": 0.471,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 3,
+          "preco_mediano": 32.8,
+          "razao_vs_mediana": 1.132,
+          "desvio_percentual": 13.2
+        },
+        {
+          "orgao_cnpj": "33654831000136",
+          "orgao_nome": "CONSELHO NACIONAL DE DESENVOLVIMENTO CIENTIFICO E TECNOLOGICO-CNPQ",
+          "compras": 1,
+          "preco_mediano": 28.98,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "03495116000137",
+          "orgao_nome": "CONSELHO REGIONAL DE MEDICINA DO DISTRITO FEDERAL",
+          "compras": 1,
+          "preco_mediano": 19.16,
+          "razao_vs_mediana": 0.661,
+          "desvio_percentual": -33.9
+        }
+      ]
+    },
+    {
+      "chave_item": "DESINFETANTE|LITRO",
+      "descricao": "DESINFETANTE",
+      "descricao_exemplo": "Desinfetante",
+      "unidade": "LITRO",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 3,
+      "preco_mediano": 27.99,
+      "preco_minimo": 8.98,
+      "preco_maximo": 65.86,
+      "q1": 20.49,
+      "q3": 58.79,
+      "dispersao": 1.368,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00508903000188",
+          "orgao_nome": "JUSTICA FEDERAL DE PRIMEIRA INSTANCIA",
+          "compras": 1,
+          "preco_mediano": 65.86,
+          "razao_vs_mediana": 2.353,
+          "desvio_percentual": 135.3
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 3,
+          "preco_mediano": 27.99,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "15126437000143",
+          "orgao_nome": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES",
+          "compras": 1,
+          "preco_mediano": 20.49,
+          "razao_vs_mediana": 0.732,
+          "desvio_percentual": -26.8
+        }
+      ]
+    },
+    {
+      "chave_item": "PRENDEDOR DE CRACHA|UNIDADE",
+      "descricao": "PRENDEDOR DE CRACHA",
+      "descricao_exemplo": "Prendedor de crachá",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 3,
+      "preco_mediano": 1.95,
+      "preco_minimo": 0.5,
+      "preco_maximo": 2.4,
+      "q1": 0.52,
+      "q3": 2.05,
+      "dispersao": 0.785,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "04892707000100",
+          "orgao_nome": "DNIT-DEPARTAMENTO NACIONAL DE INFRAEST DE TRANSPORTES",
+          "compras": 2,
+          "preco_mediano": 2.22,
+          "razao_vs_mediana": 1.141,
+          "desvio_percentual": 14.1
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 1.23,
+          "razao_vs_mediana": 0.628,
+          "desvio_percentual": -37.2
+        },
+        {
+          "orgao_cnpj": "00488478000102",
+          "orgao_nome": "SUPERIOR TRIBUNAL DE JUSTICA",
+          "compras": 1,
+          "preco_mediano": 0.52,
+          "razao_vs_mediana": 0.267,
+          "desvio_percentual": -73.3
+        }
+      ]
+    },
+    {
+      "chave_item": "VEICULO PICK UP|UNIDADE",
+      "descricao": "VEICULO PICK UP",
+      "descricao_exemplo": "Veículo Pick-Up",
+      "unidade": "UNIDADE",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 7,
+      "orgaos": 3,
+      "preco_mediano": 271252.0,
+      "preco_minimo": 260000.0,
+      "preco_maximo": 273500.0,
+      "q1": 270000.0,
+      "q3": 271252.0,
+      "dispersao": 0.027,
+      "fora_da_faixa": [
+        {
+          "valor_unitario": 219999.0,
+          "quantidade": 62.0,
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "descricao_original": "Veículo Pick-Up"
+        },
+        {
+          "valor_unitario": 290500.0,
+          "quantidade": 1028.0,
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "descricao_original": "Veículo pick-up"
+        }
+      ],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "00394494010441",
+          "orgao_nome": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
+          "compras": 2,
+          "preco_mediano": 271750.0,
+          "razao_vs_mediana": 1.002,
+          "desvio_percentual": 0.2
+        },
+        {
+          "orgao_cnpj": "00394452000103",
+          "orgao_nome": "COMANDO DO EXERCITO",
+          "compras": 2,
+          "preco_mediano": 271252.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00394429000100",
+          "orgao_nome": "COMANDO DA AERONAUTICA",
+          "compras": 1,
+          "preco_mediano": 260000.0,
+          "razao_vs_mediana": 0.959,
+          "desvio_percentual": -4.1
+        }
+      ]
+    },
+    {
+      "chave_item": "COPO DESCARTAVEL|CENTENA",
+      "descricao": "COPO DESCARTAVEL",
+      "descricao_exemplo": "Copo descartável",
+      "unidade": "CENTENA",
+      "material_ou_servico": "M",
+      "observacoes": 5,
+      "observacoes_brutas": 5,
+      "orgaos": 3,
+      "preco_mediano": 4.0,
+      "preco_minimo": 2.37,
+      "preco_maximo": 5.0,
+      "q1": 2.64,
+      "q3": 4.55,
+      "dispersao": 0.477,
+      "fora_da_faixa": [],
+      "comparativo_orgaos": [
+        {
+          "orgao_cnpj": "26989715000102",
+          "orgao_nome": "MINISTERIO PUBLICO DA UNIAO",
+          "compras": 1,
+          "preco_mediano": 4.0,
+          "razao_vs_mediana": 1.0,
+          "desvio_percentual": 0.0
+        },
+        {
+          "orgao_cnpj": "00038174000143",
+          "orgao_nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+          "compras": 2,
+          "preco_mediano": 3.69,
+          "razao_vs_mediana": 0.921,
+          "desvio_percentual": -7.9
+        },
+        {
+          "orgao_cnpj": "00394411000109",
+          "orgao_nome": "PRESIDENCIA DA REPUBLICA",
+          "compras": 2,
+          "preco_mediano": 3.59,
+          "razao_vs_mediana": 0.899,
+          "desvio_percentual": -10.1
+        }
+      ]
+    }
+  ],
+  "categorias_amplas": [
+    {
+      "descricao": "Peça Mecânica/Elétrica - Veículo Automotivo",
+      "unidade": "UNIDADE",
+      "observacoes": 25,
+      "orgaos": 3,
+      "dispersao": 9856.732,
+      "q1": 0.4,
+      "q3": 2419.04
+    },
+    {
+      "descricao": "Respirador",
+      "unidade": "UNIDADE",
+      "observacoes": 5,
+      "orgaos": 3,
+      "dispersao": 200.197,
+      "q1": 3.0,
+      "q3": 7110.0
+    },
+    {
+      "descricao": "Unidade disco",
+      "unidade": "UNIDADE",
+      "observacoes": 6,
+      "orgaos": 4,
+      "dispersao": 20.878,
+      "q1": 11661.22,
+      "q3": 209700.0
+    },
+    {
+      "descricao": "Gás refino de petróleo",
+      "unidade": "QUILOGRAMA",
+      "observacoes": 10,
+      "orgaos": 5,
+      "dispersao": 20.68,
+      "q1": 4.91,
+      "q3": 76.3
+    },
+    {
+      "descricao": "Cabo Rede Computador",
+      "unidade": "UNIDADE",
+      "observacoes": 10,
+      "orgaos": 4,
+      "dispersao": 20.432,
+      "q1": 16.5,
+      "q3": 772.48
+    },
+    {
+      "descricao": "Cola",
+      "unidade": "UNIDADE",
+      "observacoes": 7,
+      "orgaos": 5,
+      "dispersao": 13.545,
+      "q1": 1.16,
+      "q3": 9.14
+    },
+    {
+      "descricao": "Adaptador conector",
+      "unidade": "UNIDADE",
+      "observacoes": 12,
+      "orgaos": 7,
+      "dispersao": 12.494,
+      "q1": 31.85,
+      "q3": 2476.84
+    },
+    {
+      "descricao": "Equipamento Videoconferência",
+      "unidade": "UNIDADE",
+      "observacoes": 5,
+      "orgaos": 3,
+      "dispersao": 10.805,
+      "q1": 5968.71,
+      "q3": 82900.0
+    },
+    {
+      "descricao": "Mesa Copa/Cozinha",
+      "unidade": "UNIDADE",
+      "observacoes": 5,
+      "orgaos": 4,
+      "dispersao": 9.845,
+      "q1": 400.0,
+      "q3": 5155.0
+    },
+    {
+      "descricao": "Equipamentos diversos para serviços profissionais",
+      "unidade": "UNIDADE",
+      "observacoes": 26,
+      "orgaos": 10,
+      "dispersao": 7.967,
+      "q1": 1474.25,
+      "q3": 230351.0
+    },
+    {
+      "descricao": "Suporte de videocassete , televisao",
+      "unidade": "UNIDADE",
+      "observacoes": 6,
+      "orgaos": 5,
+      "dispersao": 5.782,
+      "q1": 77.03,
+      "q3": 528.78
+    },
+    {
+      "descricao": "Bateria Recarregável",
+      "unidade": "UNIDADE",
+      "observacoes": 18,
+      "orgaos": 8,
+      "dispersao": 5.642,
+      "q1": 411.5,
+      "q3": 7761.12
+    },
+    {
+      "descricao": "Medalha",
+      "unidade": "UNIDADE",
+      "observacoes": 27,
+      "orgaos": 5,
+      "dispersao": 5.487,
+      "q1": 3.0,
+      "q3": 442.0
+    },
+    {
+      "descricao": "Firewall",
+      "unidade": "UNIDADE",
+      "observacoes": 13,
+      "orgaos": 5,
+      "dispersao": 5.02,
+      "q1": 29000.0,
+      "q3": 194030.0
+    },
+    {
+      "descricao": "Caneta Esferográfica",
+      "unidade": "UNIDADE",
+      "observacoes": 23,
+      "orgaos": 11,
+      "dispersao": 4.807,
+      "q1": 0.48,
+      "q3": 0.95
+    },
+    {
+      "descricao": "Microfone",
+      "unidade": "UNIDADE",
+      "observacoes": 13,
+      "orgaos": 6,
+      "dispersao": 4.553,
+      "q1": 50.0,
+      "q3": 3200.0
+    },
+    {
+      "descricao": "Ponto de acesso",
+      "unidade": "UNIDADE",
+      "observacoes": 6,
+      "orgaos": 5,
+      "dispersao": 3.968,
+      "q1": 4147.0,
+      "q3": 7072.5
+    },
+    {
+      "descricao": "Equipamento Segurança Rede",
+      "unidade": "UNIDADE",
+      "observacoes": 9,
+      "orgaos": 6,
+      "dispersao": 3.604,
+      "q1": 220517.18,
+      "q3": 1610000.0
+    },
+    {
+      "descricao": "Extensão óptica",
+      "unidade": "UNIDADE",
+      "observacoes": 10,
+      "orgaos": 3,
+      "dispersao": 3.177,
+      "q1": 54.02,
+      "q3": 241.5
+    },
+    {
+      "descricao": "Botom",
+      "unidade": "UNIDADE",
+      "observacoes": 9,
+      "orgaos": 5,
+      "dispersao": 3.127,
+      "q1": 4.4,
+      "q3": 30.98
+    },
+    {
+      "descricao": "Transceiver",
+      "unidade": "UNIDADE",
+      "observacoes": 11,
+      "orgaos": 4,
+      "dispersao": 2.972,
+      "q1": 104.5,
+      "q3": 803.0
+    },
+    {
+      "descricao": "Calça",
+      "unidade": "UNIDADE",
+      "observacoes": 10,
+      "orgaos": 6,
+      "dispersao": 2.933,
+      "q1": 38.55,
+      "q3": 449.17
+    },
+    {
+      "descricao": "Servidor",
+      "unidade": "UNIDADE",
+      "observacoes": 23,
+      "orgaos": 13,
+      "dispersao": 2.819,
+      "q1": 148432.15,
+      "q3": 737919.97
+    },
+    {
+      "descricao": "Cabo elétrico flexível",
+      "unidade": "METRO",
+      "observacoes": 41,
+      "orgaos": 4,
+      "dispersao": 2.549,
+      "q1": 2.73,
+      "q3": 13.45
+    },
+    {
+      "descricao": "Fruta",
+      "unidade": "QUILOGRAMA",
+      "observacoes": 20,
+      "orgaos": 4,
+      "dispersao": 2.471,
+      "q1": 3.47,
+      "q3": 14.7
+    },
+    {
+      "descricao": "Pasta Arquivo",
+      "unidade": "UNIDADE",
+      "observacoes": 7,
+      "orgaos": 5,
+      "dispersao": 2.422,
+      "q1": 1.41,
+      "q3": 3.69
+    },
+    {
+      "descricao": "Monitor computador",
+      "unidade": "UNIDADE",
+      "observacoes": 16,
+      "orgaos": 10,
+      "dispersao": 2.351,
+      "q1": 460.0,
+      "q3": 961.61
+    },
+    {
+      "descricao": "Impresso padronizado",
+      "unidade": "UNIDADE",
+      "observacoes": 24,
+      "orgaos": 6,
+      "dispersao": 2.288,
+      "q1": 0.39,
+      "q3": 3.42
+    },
+    {
+      "descricao": "Ventilador",
+      "unidade": "UNIDADE",
+      "observacoes": 8,
+      "orgaos": 4,
+      "dispersao": 2.014,
+      "q1": 220.38,
+      "q3": 703.88
+    },
+    {
+      "descricao": "Capacete segurança",
+      "unidade": "UNIDADE",
+      "observacoes": 6,
+      "orgaos": 4,
+      "dispersao": 2.005,
+      "q1": 15.82,
+      "q3": 51.0
+    }
+  ]
+}
