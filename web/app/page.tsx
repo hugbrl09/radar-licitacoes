@@ -50,8 +50,9 @@ export default function Home() {
         <p className="font-medium">Antes de interpretar estes números</p>
         <p className="mt-1">
           O PNCP não publica a especificação técnica dos itens — apenas um rótulo de
-          catálogo. “Monitor computador” abrange tanto um monitor de escritório
-          quanto um painel profissional de grande porte. Estes números descrevem a{" "}
+          catálogo. “Condimento”, por exemplo, aparece aqui de R$ 0,02 a R$ 44,00,
+          porque o mesmo rótulo cobre desde um sachê de sal até um pote de especiaria.
+          Estes números descrevem a{" "}
           <strong className="font-medium">
             faixa de preço praticada dentro de uma categoria
           </strong>
