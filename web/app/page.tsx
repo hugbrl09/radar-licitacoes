@@ -5,7 +5,7 @@ import {
   carregarAnalise,
   gerarSlug,
   indicePorSlug,
-  nomearRecorte,
+  recorteDe,
 } from "@/lib/dados";
 
 export default function Home() {
@@ -34,8 +34,8 @@ export default function Home() {
         Faixas de preço em compras públicas
       </h1>
       <p className="mt-3 max-w-3xl text-stone-600 dark:text-stone-300">
-        Quanto os órgãos públicos de {nomearRecorte(analise.recorte.ufs)} pagaram,
-        por unidade, em pregões eletrônicos registrados no PNCP. Os valores são os{" "}
+        Quanto os órgãos públicos {recorteDe(analise.recorte.ufs)} pagaram, por
+        unidade, em pregões eletrônicos registrados no PNCP. Os valores são os{" "}
         <strong className="font-medium">efetivamente homologados</strong> — o preço
         adjudicado ao fornecedor, não a estimativa feita antes da disputa.
       </p>

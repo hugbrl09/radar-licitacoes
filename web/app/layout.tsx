@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { carregarAnalise, nomearRecorte } from "@/lib/dados";
+import { carregarAnalise, recorteDe } from "@/lib/dados";
 import "./globals.css";
 
 export function generateMetadata(): Metadata {
-  const recorte = nomearRecorte(carregarAnalise().recorte.ufs);
+  const recorte = recorteDe(carregarAnalise().recorte.ufs);
   return {
     title: "Radar de Licitações — faixas de preço em compras públicas",
-    description: `Faixas de preço praticadas em compras públicas de ${recorte}, a partir dos dados abertos do PNCP.`,
+    description: `Faixas de preço praticadas em compras públicas ${recorte}, a partir dos dados abertos do PNCP.`,
   };
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const recorte = nomearRecorte(carregarAnalise().recorte.ufs);
+  const recorte = recorteDe(carregarAnalise().recorte.ufs);
 
   return (
     <html lang="pt-BR">
@@ -25,7 +25,7 @@ export default function RootLayout({
               Radar de Licitações
             </Link>
             <span className="text-sm text-stone-500 dark:text-stone-400">
-              Compras públicas de {recorte} · dados abertos do PNCP
+              Compras públicas {recorte} · dados abertos do PNCP
             </span>
             <nav className="ml-auto flex gap-5 text-sm">
               <Link href="/" className="hover:underline">

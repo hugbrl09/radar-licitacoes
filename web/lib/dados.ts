@@ -146,23 +146,79 @@ export function indicePorSlug(): Map<string, ItemAnalisado> {
   return indice;
 }
 
-const NOME_UF: Record<string, string> = {
-  AC: "Acre", AL: "Alagoas", AP: "Amapá", AM: "Amazonas", BA: "Bahia",
-  CE: "Ceará", DF: "Distrito Federal", ES: "Espírito Santo", GO: "Goiás",
-  MA: "Maranhão", MT: "Mato Grosso", MS: "Mato Grosso do Sul",
-  MG: "Minas Gerais", PA: "Pará", PB: "Paraíba", PR: "Paraná",
-  PE: "Pernambuco", PI: "Piauí", RJ: "Rio de Janeiro",
-  RN: "Rio Grande do Norte", RS: "Rio Grande do Sul", RO: "Rondônia",
-  RR: "Roraima", SC: "Santa Catarina", SP: "São Paulo", SE: "Sergipe",
-  TO: "Tocantins",
+/** Nome e artigo de cada UF.
+ *
+ *  O artigo não é enfeite: em português, nome de estado rege artigo de um jeito
+ *  que não dá para deduzir do nome. Diz-se "do Tocantins" e "do Pará", mas "de
+ *  Goiás" e "de Pernambuco"; e "da Bahia". Como a UF é parâmetro do pipeline, a
+ *  regra precisa valer para qualquer estado, não só para o recorte atual.
+ *
+ *  artigo "" = não leva artigo. */
+const UF: Record<string, { nome: string; artigo: "o" | "a" | "" }> = {
+  AC: { nome: "Acre", artigo: "o" },
+  AL: { nome: "Alagoas", artigo: "" },
+  AP: { nome: "Amapá", artigo: "o" },
+  AM: { nome: "Amazonas", artigo: "o" },
+  BA: { nome: "Bahia", artigo: "a" },
+  CE: { nome: "Ceará", artigo: "o" },
+  DF: { nome: "Distrito Federal", artigo: "o" },
+  ES: { nome: "Espírito Santo", artigo: "o" },
+  GO: { nome: "Goiás", artigo: "" },
+  MA: { nome: "Maranhão", artigo: "o" },
+  MT: { nome: "Mato Grosso", artigo: "o" },
+  MS: { nome: "Mato Grosso do Sul", artigo: "o" },
+  MG: { nome: "Minas Gerais", artigo: "" },
+  PA: { nome: "Pará", artigo: "o" },
+  PB: { nome: "Paraíba", artigo: "a" },
+  PR: { nome: "Paraná", artigo: "o" },
+  PE: { nome: "Pernambuco", artigo: "" },
+  PI: { nome: "Piauí", artigo: "o" },
+  RJ: { nome: "Rio de Janeiro", artigo: "o" },
+  RN: { nome: "Rio Grande do Norte", artigo: "o" },
+  RS: { nome: "Rio Grande do Sul", artigo: "o" },
+  RO: { nome: "Rondônia", artigo: "" },
+  RR: { nome: "Roraima", artigo: "" },
+  SC: { nome: "Santa Catarina", artigo: "" },
+  SP: { nome: "São Paulo", artigo: "" },
+  SE: { nome: "Sergipe", artigo: "" },
+  TO: { nome: "Tocantins", artigo: "o" },
 };
 
-/** "TO" -> "Tocantins"; várias UFs viram "Tocantins e Goiás". */
+const juntar = (partes: string[]) =>
+  partes.length <= 1
+    ? partes[0] ?? ""
+    : `${partes.slice(0, -1).join(", ")} e ${partes[partes.length - 1]}`;
+
+/** Nome puro: "Tocantins". Para título e rótulo, onde não cabe artigo. */
 export function nomearRecorte(ufs: string[]): string {
-  const nomes = ufs.map((u) => NOME_UF[u] ?? u);
-  if (nomes.length === 0) return "Brasil";
-  if (nomes.length === 1) return nomes[0];
-  return `${nomes.slice(0, -1).join(", ")} e ${nomes[nomes.length - 1]}`;
+  if (ufs.length === 0) return "Brasil";
+  return juntar(ufs.map((u) => UF[u]?.nome ?? u));
+}
+
+/** Com artigo: "o Tocantins", "a Bahia", "Goiás". */
+export function recorteComArtigo(ufs: string[]): string {
+  if (ufs.length === 0) return "o Brasil";
+  return juntar(
+    ufs.map((u) => {
+      const e = UF[u];
+      if (!e) return u;
+      return e.artigo ? `${e.artigo} ${e.nome}` : e.nome;
+    }),
+  );
+}
+
+/** Contraído com "de": "do Tocantins", "da Bahia", "de Goiás". */
+export function recorteDe(ufs: string[]): string {
+  if (ufs.length === 0) return "do Brasil";
+  return juntar(
+    ufs.map((u) => {
+      const e = UF[u];
+      if (!e) return `de ${u}`;
+      if (e.artigo === "o") return `do ${e.nome}`;
+      if (e.artigo === "a") return `da ${e.nome}`;
+      return `de ${e.nome}`;
+    }),
+  );
 }
 
 export const brl = (v: number) =>

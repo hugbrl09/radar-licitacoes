@@ -1,4 +1,4 @@
-import { brl, carregarAnalise, nomearRecorte } from "@/lib/dados";
+import { brl, carregarAnalise, recorteComArtigo } from "@/lib/dados";
 
 export const metadata = {
   title: "Metodologia — Radar de Licitações",
@@ -53,7 +53,7 @@ export default function Metodologia() {
         </li>
         <li>
           Não cobre todas as compras públicas. O recorte é{" "}
-          {nomearRecorte(recorte.ufs)}, pregão eletrônico, apenas itens com
+          {recorteComArtigo(recorte.ufs)}, pregão eletrônico, apenas itens com
           resultado homologado publicado — {recorte.compras.toLocaleString("pt-BR")}{" "}
           compras de {recorte.orgaos} órgãos.
         </li>
