@@ -65,6 +65,14 @@ export type Analise = {
     apenas_materiais: boolean;
   };
   gerado_em: string;
+  /** Deduzido dos próprios dados pelo pipeline — a UF não fica escrita no código
+   *  da interface, então trocar de estado não exige mexer aqui. */
+  recorte: {
+    ufs: string[];
+    compras: number;
+    orgaos: number;
+    periodo: [string | null, string | null];
+  };
   itens: ItemAnalisado[];
   /** Categorias amplas demais para comparação. Publicadas de propósito: omitir
    *  o que foi descartado seria escolher a dedo o que confirma a tese. */
@@ -87,14 +95,39 @@ export function carregarAnalise(): Analise {
  * URL. Geramos um slug estável e guardamos o caminho de volta, em vez de tentar
  * reconstruir a chave a partir do slug — a transformação não é reversível.
  */
+/** Limite do trecho legível do slug.
+ *
+ *  Existe porque descrições reais chegam a 300+ caracteres: compras municipais
+ *  trazem a especificação inteira no campo de descrição ("abacaxi pérola 1a
+ *  qualidade in natura tamanho e coloração uniforme polpa firme livres de
+ *  sujidades…"). Um slug desse tamanho estoura o limite de caminho do Windows
+ *  na hora de gerar as páginas estáticas. */
+const MAX_SLUG = 60;
+
+/** Hash determinístico (djb2) só para desempatar slugs truncados. Não é
+ *  criptográfico e nem precisa ser — só precisa ser estável entre builds. */
+function hashCurto(s: string): string {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+  return (h >>> 0).toString(36);
+}
+
 export function gerarSlug(chave: string): string {
   // ̀-ͯ é a faixa de marcas diacríticas combinantes que o NFD separa.
-  return chave
+  const base = chave
     .toLowerCase()
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+
+  if (base.length <= MAX_SLUG) return base;
+
+  // Trunca na fronteira de palavra para não cortar no meio, e carimba o hash da
+  // chave completa — duas descrições que começam igual continuam com URLs
+  // distintas.
+  const cortado = base.slice(0, MAX_SLUG).replace(/-[^-]*$/, "");
+  return `${cortado}-${hashCurto(chave)}`;
 }
 
 export function indicePorSlug(): Map<string, ItemAnalisado> {
@@ -111,6 +144,25 @@ export function indicePorSlug(): Map<string, ItemAnalisado> {
     indice.set(slug, item);
   }
   return indice;
+}
+
+const NOME_UF: Record<string, string> = {
+  AC: "Acre", AL: "Alagoas", AP: "Amapá", AM: "Amazonas", BA: "Bahia",
+  CE: "Ceará", DF: "Distrito Federal", ES: "Espírito Santo", GO: "Goiás",
+  MA: "Maranhão", MT: "Mato Grosso", MS: "Mato Grosso do Sul",
+  MG: "Minas Gerais", PA: "Pará", PB: "Paraíba", PR: "Paraná",
+  PE: "Pernambuco", PI: "Piauí", RJ: "Rio de Janeiro",
+  RN: "Rio Grande do Norte", RS: "Rio Grande do Sul", RO: "Rondônia",
+  RR: "Roraima", SC: "Santa Catarina", SP: "São Paulo", SE: "Sergipe",
+  TO: "Tocantins",
+};
+
+/** "TO" -> "Tocantins"; várias UFs viram "Tocantins e Goiás". */
+export function nomearRecorte(ufs: string[]): string {
+  const nomes = ufs.map((u) => NOME_UF[u] ?? u);
+  if (nomes.length === 0) return "Brasil";
+  if (nomes.length === 1) return nomes[0];
+  return `${nomes.slice(0, -1).join(", ")} e ${nomes[nomes.length - 1]}`;
 }
 
 export const brl = (v: number) =>

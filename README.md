@@ -2,7 +2,9 @@
 
 Ingestão, normalização e análise de contratações públicas do **PNCP** (Portal
 Nacional de Contratações Públicas), com uma interface que mostra a faixa de preço
-praticada por categoria de item entre órgãos do Distrito Federal.
+praticada por categoria de item entre órgãos públicos. O recorte atual é
+**Tocantins**, mas a UF é um parâmetro do pipeline — a interface lê o recorte dos
+próprios dados, sem nome de estado escrito no código.
 
 O núcleo é neutro — ingere, normaliza e compara. Sobre ele ficam duas leituras do
 mesmo dado: **inteligência de mercado** (onde e por quanto o governo compra) e
@@ -39,11 +41,11 @@ Requer [uv](https://docs.astral.sh/uv/) e Node 20+.
 # 1. ingestão (a API do PNCP é instável — o cache torna a retomada barata)
 cd ingestao
 uv sync
-uv run python -m radar.ingest --limite 2500
+uv run python -m radar.ingest --uf TO --limite 2500
 
-# 2. normalização e análise
-uv run python -m radar.normalizar
-uv run python -m radar.analise
+# 2. normalização e análise (os arquivos carregam a UF no nome)
+uv run python -m radar.normalizar --uf TO
+uv run python -m radar.analise --uf TO
 
 # 3. interface
 cd ../web
@@ -73,6 +75,11 @@ uv run python -m radar.carregar
 - Serviços ficam de fora: a descrição deles é título, não escopo (§10).
 - O PNCP não publica especificação de item — o que a análise pode afirmar foi
   reescrito por causa disso (§12).
+- Dispersão alta é sintoma de categoria-balde, não achado: entra corte e a
+  ordenação passa a ser por força do dado (§13).
+- O recorte é Tocantins, e a medição mostrou que ele é estatisticamente melhor que
+  o Distrito Federal para esta análise — além de um efeito de seleção que faz o
+  agrupamento favorecer descrições genéricas (§14).
 
 Cada uma está justificada em [DECISIONS.md](DECISIONS.md).
 

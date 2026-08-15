@@ -177,10 +177,16 @@ def main() -> None:
     p.add_argument("--limite", type=int, default=None, help="máximo de compras")
     p.add_argument("--completo", action="store_true",
                    help="cobertura completa da fatia, particionando por órgão")
-    p.add_argument("--saida", type=Path, default=DIR_DADOS / "compras.jsonl")
+    p.add_argument("--saida", type=Path, default=None,
+                   help="padrão: dados/compras-{uf}.jsonl")
     p.add_argument("--pausa", type=float, default=0.2,
                    help="segundos entre compras, para não martelar a API")
     args = p.parse_args()
+
+    # Os arquivos carregam a UF no nome para que fatias de estados diferentes
+    # convivam sem se sobrescrever.
+    if args.saida is None:
+        args.saida = DIR_DADOS / f"compras-{args.uf.lower()}.jsonl"
 
     logging.basicConfig(
         level=logging.INFO,

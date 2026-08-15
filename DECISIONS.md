@@ -274,6 +274,59 @@ dispersão alta, o erro estaria no código, não no governo.
 
 ---
 
+## 14. Mudança de recorte: Distrito Federal → Tocantins
+
+**Motivo inicial, prático:** o autor mora em Tocantins, e um projeto sobre compras
+públicas da própria região é mais defensável e mais útil do que um sobre a capital.
+
+**O que a medição mostrou — e foi uma surpresa boa.** Tocantins não é só viável, é
+um recorte *melhor* para esta análise:
+
+| | DF | TO |
+|---|---|---|
+| Compras disponíveis (pregão eletrônico) | 17.609 | 10.770 |
+| Categorias comparáveis | 89 | **109** |
+| Descartadas por serem amplas demais | 30 | **6** |
+| Órgãos distintos | 104 | **307** |
+| Maior amostra numa categoria | 62 compras | **436 compras, 26 órgãos** |
+
+A razão é o perfil de compra. O DF concentra órgãos federais comprando TI e
+mobiliário — onde "Monitor computador" vira balde. Tocantins é dominado por
+**municípios comprando alimento e material básico**: arroz, açúcar, carne, legume,
+verdura. Arroz é arroz; monitor não é monitor. Categorias homogêneas por natureza
+dão comparação honesta, e a pulverização em 307 órgãos dá massa estatística.
+
+**Como a troca foi feita:** parametrizando, não trocando texto. O pipeline já
+aceitava `--uf`; os arquivos passaram a carregar a UF no nome
+(`compras-{uf}.jsonl`), e a análise passou a gravar um bloco `recorte` deduzido dos
+próprios dados. **A interface lê a UF do JSON** — não há nome de estado escrito no
+código do frontend. Trocar de estado é reprocessar e publicar.
+
+### 14.1. Efeito de seleção: o agrupamento favorece a descrição vaga
+
+Ao trocar de estado apareceu um detalhe que não existia no DF: 13% das descrições
+de Tocantins são especificações completas de verdade ("ARROZ AGULHINHA TIPO 1 —
+Tipo 1. Constituídos de grãos inteiros, com aspecto, sabor e cheiro próprios…",
+456 caracteres).
+
+Isso parecia enfraquecer o §12 — mas mediu-se o oposto. **Entre as 109 categorias
+efetivamente publicadas, 95% das descrições têm 40 caracteres ou menos** (mediana de
+14: "Ovo", "Cola", "Café").
+
+A explicação é um efeito de seleção: quando um órgão escreve a especificação
+inteira, aquele item deixa de coincidir com o de qualquer outro e **não alcança o
+mínimo de 3 órgãos**. Descrição detalhada é automaticamente eliminada pelo próprio
+critério de agrupamento. Ou seja, o sistema publica justamente as descrições mais
+genéricas — e isso está dito na metodologia, porque é uma limitação estrutural, não
+um detalhe.
+
+**Efeito colateral técnico:** as descrições longas geravam slugs de 300+ caracteres
+e estouravam o limite de caminho do Windows durante a geração das páginas. O slug
+passou a ser truncado em 60 caracteres com um hash curto da chave completa,
+preservando unicidade.
+
+---
+
 ## 11. Mediana e intervalo interquartil, não média e desvio padrão
 
 Preço de compra pública tem cauda longa: um contrato atípico distorce a média e o

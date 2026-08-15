@@ -188,9 +188,16 @@ def main() -> None:
 
     dir_dados = Path(__file__).resolve().parent.parent / "dados"
     p = argparse.ArgumentParser(description="Normaliza e achata o JSONL bruto")
-    p.add_argument("--entrada", type=Path, default=dir_dados / "compras.jsonl")
-    p.add_argument("--saida", type=Path, default=dir_dados / "itens.jsonl")
+    p.add_argument("--uf", default="TO", help="define os caminhos padrão")
+    p.add_argument("--entrada", type=Path, default=None)
+    p.add_argument("--saida", type=Path, default=None)
     args = p.parse_args()
+
+    uf = args.uf.lower()
+    if args.entrada is None:
+        args.entrada = dir_dados / f"compras-{uf}.jsonl"
+    if args.saida is None:
+        args.saida = dir_dados / f"itens-{uf}.jsonl"
 
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     n = achatar_arquivo(args.entrada, args.saida)

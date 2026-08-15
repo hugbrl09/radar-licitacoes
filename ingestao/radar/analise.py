@@ -50,7 +50,12 @@ LIMITACAO = (
     "computador' abrange tanto um monitor de escritório quanto um painel "
     "profissional de grande porte. Portanto esta comparação mede a faixa de preço "
     "praticada dentro de uma categoria de catálogo — não o preço de um produto "
-    "idêntico. Diferenças de preço podem refletir produtos genuinamente diferentes."
+    "idêntico. Diferenças de preço podem refletir produtos genuinamente diferentes. "
+    "Há ainda um efeito de seleção que agrava isso: quando um órgão escreve a "
+    "especificação completa na descrição, aquele item deixa de coincidir com o de "
+    "qualquer outro e não alcança o mínimo de órgãos exigido. Ou seja, o próprio "
+    "agrupamento favorece as descrições mais genéricas — nas categorias "
+    "publicadas aqui, 95% das descrições têm 40 caracteres ou menos."
 )
 
 METODOLOGIA = (
@@ -76,6 +81,24 @@ METODOLOGIA = (
 def _agora() -> str:
     from datetime import datetime, timezone
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def descrever_recorte(linhas: list[dict[str, Any]]) -> dict[str, Any]:
+    """Deduz o recorte a partir dos próprios dados.
+
+    A interface lê daqui em vez de ter a UF escrita no código. Trocar de estado
+    passa a ser trocar o arquivo de entrada — sem tocar no frontend.
+    """
+    ufs = sorted({l.get("uf") for l in linhas if l.get("uf")})
+    return {
+        "ufs": ufs,
+        "compras": len({l.get("numero_controle_pncp") for l in linhas}),
+        "orgaos": len({l.get("orgao_cnpj") for l in linhas}),
+        "periodo": [
+            min((l["data_publicacao"] for l in linhas if l.get("data_publicacao")), default=None),
+            max((l["data_publicacao"] for l in linhas if l.get("data_publicacao")), default=None),
+        ],
+    }
 
 
 def carregar(caminho: Path) -> list[dict[str, Any]]:
@@ -222,10 +245,17 @@ def main() -> None:
 
     dir_dados = Path(__file__).resolve().parent.parent / "dados"
     p = argparse.ArgumentParser(description="Análise de dispersão de preço")
-    p.add_argument("--entrada", type=Path, default=dir_dados / "itens.jsonl")
-    p.add_argument("--saida", type=Path, default=dir_dados / "analise.json")
+    p.add_argument("--uf", default="TO", help="define os caminhos padrão")
+    p.add_argument("--entrada", type=Path, default=None)
+    p.add_argument("--saida", type=Path, default=None)
     p.add_argument("--incluir-servicos", action="store_true")
     args = p.parse_args()
+
+    uf = args.uf.lower()
+    if args.entrada is None:
+        args.entrada = dir_dados / f"itens-{uf}.jsonl"
+    if args.saida is None:
+        args.saida = dir_dados / f"analise-{uf}.json"
 
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     linhas = carregar(args.entrada)
@@ -240,6 +270,7 @@ def main() -> None:
                            "limite_dispersao": LIMITE_DISPERSAO,
                            "apenas_materiais": not args.incluir_servicos},
              "gerado_em": _agora(),
+             "recorte": descrever_recorte(linhas),
              "itens": comparaveis,
              "categorias_amplas": [
                  {"descricao": a["descricao_exemplo"], "unidade": a["unidade"],

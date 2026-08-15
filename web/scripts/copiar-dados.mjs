@@ -10,7 +10,9 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const aqui = dirname(fileURLToPath(import.meta.url));
-const origem = join(aqui, "..", "..", "ingestao", "dados", "analise.json");
+// Qual UF vai para o site. Trocar de estado é trocar esta variável e reprocessar.
+const uf = (process.env.RADAR_UF ?? "to").toLowerCase();
+const origem = join(aqui, "..", "..", "ingestao", "dados", `analise-${uf}.json`);
 const destino = join(aqui, "..", "data", "analise.json");
 
 if (!existsSync(origem)) {

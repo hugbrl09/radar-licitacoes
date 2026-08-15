@@ -1,12 +1,19 @@
-import { brl, carregarAnalise } from "@/lib/dados";
+import { brl, carregarAnalise, nomearRecorte } from "@/lib/dados";
 
 export const metadata = {
   title: "Metodologia — Radar de Licitações",
 };
 
 export default function Metodologia() {
-  const { metodologia, limitacao, criterios, gerado_em, itens, categorias_amplas } =
-    carregarAnalise();
+  const {
+    metodologia,
+    limitacao,
+    criterios,
+    gerado_em,
+    itens,
+    categorias_amplas,
+    recorte,
+  } = carregarAnalise();
 
   return (
     <article className="max-w-3xl">
@@ -45,8 +52,10 @@ export default function Metodologia() {
           de órgão público não são.
         </li>
         <li>
-          Não cobre todas as compras públicas. O recorte é Distrito Federal, pregão
-          eletrônico, apenas itens com resultado homologado publicado.
+          Não cobre todas as compras públicas. O recorte é{" "}
+          {nomearRecorte(recorte.ufs)}, pregão eletrônico, apenas itens com
+          resultado homologado publicado — {recorte.compras.toLocaleString("pt-BR")}{" "}
+          compras de {recorte.orgaos} órgãos.
         </li>
       </ul>
 
