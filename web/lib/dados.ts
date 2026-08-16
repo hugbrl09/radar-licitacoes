@@ -30,6 +30,7 @@ export type ItemAnalisado = {
   descricao: string;
   descricao_exemplo: string;
   unidade: string;
+  segmento: string;
   material_ou_servico: string | null;
   observacoes: number;
   observacoes_brutas: number;
@@ -71,6 +72,9 @@ export type Analise = {
     ufs: string[];
     compras: number;
     orgaos: number;
+    segmentos: Record<string, number>;
+    /** % dos itens que o classificador conseguiu enquadrar (fora de "Outros"). */
+    cobertura_segmentos: number;
     periodo: [string | null, string | null];
   };
   itens: ItemAnalisado[];

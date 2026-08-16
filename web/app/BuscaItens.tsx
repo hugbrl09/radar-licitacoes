@@ -8,6 +8,7 @@ type Linha = {
   descricao: string;
   descricaoExemplo: string;
   unidade: string;
+  segmento: string;
   observacoes: number;
   orgaos: number;
   precoMediano: string;
@@ -16,18 +17,31 @@ type Linha = {
   foraDaFaixa: number;
 };
 
+const TODOS = "Todos";
+
 export default function BuscaItens({ linhas }: { linhas: Linha[] }) {
   const [termo, setTermo] = useState("");
+  const [segmento, setSegmento] = useState(TODOS);
+
+  // Só oferecemos segmentos que existem nos dados publicados — um filtro que
+  // devolve lista vazia é uma promessa quebrada.
+  const segmentos = useMemo(() => {
+    const contagem = new Map<string, number>();
+    for (const l of linhas) contagem.set(l.segmento, (contagem.get(l.segmento) ?? 0) + 1);
+    return [...contagem.entries()].sort((a, b) => b[1] - a[1]);
+  }, [linhas]);
 
   const filtradas = useMemo(() => {
     const t = termo.trim().toLowerCase();
-    if (!t) return linhas;
-    return linhas.filter(
-      (l) =>
+    return linhas.filter((l) => {
+      if (segmento !== TODOS && l.segmento !== segmento) return false;
+      if (!t) return true;
+      return (
         l.descricao.toLowerCase().includes(t) ||
-        l.descricaoExemplo.toLowerCase().includes(t),
-    );
-  }, [linhas, termo]);
+        l.descricaoExemplo.toLowerCase().includes(t)
+      );
+    });
+  }, [linhas, termo, segmento]);
 
   return (
     <div>
@@ -37,12 +51,34 @@ export default function BuscaItens({ linhas }: { linhas: Linha[] }) {
           type="search"
           value={termo}
           onChange={(e) => setTermo(e.target.value)}
-          placeholder="Buscar item — ex.: monitor, cadeira, cabo"
+          placeholder="Buscar item — ex.: arroz, cadeira, notebook"
           className="w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-base
                      placeholder:text-stone-400 focus:border-stone-500 focus:outline-none
                      dark:border-stone-700 dark:bg-stone-900 dark:placeholder:text-stone-500"
         />
       </label>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {[[TODOS, linhas.length] as const, ...segmentos].map(([nome, n]) => {
+          const ativo = segmento === nome;
+          return (
+            <button
+              key={nome}
+              type="button"
+              onClick={() => setSegmento(nome)}
+              aria-pressed={ativo}
+              className={`rounded-full border px-3 py-1 text-sm transition-colors ${
+                ativo
+                  ? "border-stone-900 bg-stone-900 text-white dark:border-stone-100 dark:bg-stone-100 dark:text-stone-900"
+                  : "border-stone-300 text-stone-600 hover:border-stone-500 dark:border-stone-700 dark:text-stone-300"
+              }`}
+            >
+              {nome}{" "}
+              <span className={ativo ? "opacity-70" : "text-stone-400"}>{n}</span>
+            </button>
+          );
+        })}
+      </div>
 
       <p className="mt-3 text-sm text-stone-500 dark:text-stone-400">
         {filtradas.length === linhas.length
@@ -50,7 +86,7 @@ export default function BuscaItens({ linhas }: { linhas: Linha[] }) {
           : `${filtradas.length} de ${linhas.length} categorias`}
       </p>
 
-      <ul className="mt-6 divide-y divide-stone-200 dark:divide-stone-800">
+      <ul className="mt-4 divide-y divide-stone-200 dark:divide-stone-800">
         {filtradas.map((l) => (
           <li key={l.slug}>
             <Link
@@ -75,7 +111,8 @@ export default function BuscaItens({ linhas }: { linhas: Linha[] }) {
 
       {filtradas.length === 0 && (
         <p className="py-12 text-center text-stone-500 dark:text-stone-400">
-          Nenhuma categoria encontrada para “{termo}”.
+          Nenhuma categoria encontrada{termo && ` para “${termo}”`}
+          {segmento !== TODOS && ` em ${segmento}`}.
         </p>
       )}
     </div>

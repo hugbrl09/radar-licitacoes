@@ -112,6 +112,48 @@ export default function Metodologia() {
       </p>
 
       <h2 className="mt-10 text-lg font-semibold">
+        Como os segmentos são atribuídos
+      </h2>
+      <p className="mt-2 leading-relaxed text-stone-700 dark:text-stone-300">
+        O segmento de cada item é atribuído por um{" "}
+        <strong className="font-medium">dicionário de palavras-chave</strong>, não
+        por um modelo estatístico. A escolha foi deliberada: a regra que classificou
+        cada item pode ser lida e corrigida, o que um modelo treinado não oferece —
+        e não existe base rotulada para treinar um.
+      </p>
+      <p className="mt-3 leading-relaxed text-stone-700 dark:text-stone-300">
+        A contrapartida é que ele erra e não cobre tudo.{" "}
+        <strong className="font-medium">
+          {recorte.cobertura_segmentos}% dos itens
+        </strong>{" "}
+        foram enquadrados em algum segmento; o restante fica em{" "}
+        <em>Outros</em> — categoria explícita, nunca diluída num segmento
+        aproximado. Quando duas palavras de segmentos diferentes têm o mesmo peso, o
+        item também vai para <em>Outros</em>, em vez de o sistema escolher um
+        arbitrariamente.
+      </p>
+      <div className="mt-4 overflow-x-auto">
+        <table className="w-full min-w-[24rem] text-sm">
+          <thead>
+            <tr className="border-b border-stone-300 text-left dark:border-stone-700">
+              <th className="py-2 pr-4 font-medium">Segmento</th>
+              <th className="py-2 text-right font-medium">Itens</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-stone-200 dark:divide-stone-800">
+            {Object.entries(recorte.segmentos).map(([nome, n]) => (
+              <tr key={nome}>
+                <td className="py-2 pr-4">{nome}</td>
+                <td className="py-2 text-right tabular-nums">
+                  {n.toLocaleString("pt-BR")}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="mt-10 text-lg font-semibold">
         Categorias descartadas por serem amplas demais
       </h2>
       <p className="mt-2 leading-relaxed text-stone-700 dark:text-stone-300">

@@ -19,6 +19,8 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
+from radar.segmentos import classificar
+
 # Unidades vistas nos dados reais escritas de várias formas: 'UNIDADE', 'Unidade',
 # 'Unidade ' (com espaço no fim). Depois de normalizar caixa e espaço, o que sobra
 # são sinônimos genuínos, resolvidos por este mapa.
@@ -138,10 +140,12 @@ def achatar_compra(compra: dict[str, Any]) -> Iterator[dict[str, Any]]:
             if homologado in (None, 0):
                 continue
 
+            descricao_norm = normalizar_texto(descricao)
             yield {
                 "chave_item": chave,
                 "descricao_original": descricao,
-                "descricao_normalizada": normalizar_texto(descricao),
+                "descricao_normalizada": descricao_norm,
+                "segmento": classificar(descricao_norm),
                 "unidade_original": unidade,
                 "unidade_normalizada": normalizar_unidade(unidade),
                 "material_ou_servico": item.get("materialOuServico"),

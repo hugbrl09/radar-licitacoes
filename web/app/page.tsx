@@ -20,6 +20,7 @@ export default function Home() {
     descricao: item.descricao,
     descricaoExemplo: item.descricao_exemplo,
     unidade: item.unidade,
+    segmento: item.segmento,
     observacoes: item.observacoes,
     orgaos: item.orgaos,
     precoMediano: brl(item.preco_mediano),

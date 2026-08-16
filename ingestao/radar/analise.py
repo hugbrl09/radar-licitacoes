@@ -20,7 +20,7 @@ from __future__ import annotations
 
 import json
 import statistics
-from collections import defaultdict
+from collections import Counter, defaultdict
 from collections.abc import Iterable, Sequence
 from pathlib import Path
 from typing import Any
@@ -90,10 +90,20 @@ def descrever_recorte(linhas: list[dict[str, Any]]) -> dict[str, Any]:
     passa a ser trocar o arquivo de entrada — sem tocar no frontend.
     """
     ufs = sorted({l.get("uf") for l in linhas if l.get("uf")})
+
+    # Distribuição por segmento sobre *todas* as linhas, não só as publicadas.
+    # Vai junto no JSON porque a taxa de "Outros" é o principal indicador de
+    # qualidade do classificador, e escondê-la seria vender precisão que ele
+    # não tem.
+    por_segmento = Counter(l.get("segmento", "Outros") for l in linhas)
+    fora = por_segmento.get("Outros", 0)
+
     return {
         "ufs": ufs,
         "compras": len({l.get("numero_controle_pncp") for l in linhas}),
         "orgaos": len({l.get("orgao_cnpj") for l in linhas}),
+        "segmentos": dict(por_segmento.most_common()),
+        "cobertura_segmentos": round(100 * (len(linhas) - fora) / len(linhas), 1) if linhas else 0,
         "periodo": [
             min((l["data_publicacao"] for l in linhas if l.get("data_publicacao")), default=None),
             max((l["data_publicacao"] for l in linhas if l.get("data_publicacao")), default=None),
@@ -176,6 +186,7 @@ def analisar_item(chave: str, linhas: list[dict[str, Any]]) -> dict[str, Any] | 
         "descricao": exemplo["descricao_normalizada"],
         "descricao_exemplo": exemplo["descricao_original"],
         "unidade": exemplo["unidade_normalizada"],
+        "segmento": exemplo.get("segmento", "Outros"),
         "material_ou_servico": exemplo.get("material_ou_servico"),
         "observacoes": len(nucleo),
         "observacoes_brutas": len(linhas),
