@@ -31,6 +31,9 @@ export default function RootLayout({
               <Link href="/" className="hover:underline">
                 Itens
               </Link>
+              <Link href="/abertos" className="hover:underline">
+                Abertas
+              </Link>
               <Link href="/metodologia" className="hover:underline">
                 Metodologia
               </Link>

@@ -24,11 +24,13 @@ ingestao/          Python — pipeline de dados
     ingest.py      varredura da fatia → JSONL bruto
     normalizar.py  texto livre → chave de agrupamento
     analise.py     dispersão de preço, com cerca de atípicos
+    segmentos.py   classificação por segmento de mercado
+    abertos.py     editais com proposta em aberto (camada rasa)
     carregar.py    JSONL → Postgres
     schema.sql
   testes/
 web/               Next.js 16 + TypeScript + Tailwind
-  app/             busca, detalhe do item, metodologia
+  app/             busca, detalhe do item, licitações abertas, metodologia
   lib/dados.ts
 DECISIONS.md       decisões técnicas e o porquê de cada uma
 ```
@@ -47,7 +49,10 @@ uv run python -m radar.ingest --uf TO --limite 2500
 uv run python -m radar.normalizar --uf TO
 uv run python -m radar.analise --uf TO
 
-# 3. interface
+# 3. licitações abertas (opcional; sem cache, sempre busca do zero)
+uv run python -m radar.abertos --uf TO
+
+# 4. interface
 cd ../web
 npm install
 npm run dev          # copia a análise para web/data/ automaticamente
@@ -80,6 +85,8 @@ uv run python -m radar.carregar
 - O recorte é Tocantins, e a medição mostrou que ele é estatisticamente melhor que
   o Distrito Federal para esta análise — além de um efeito de seleção que faz o
   agrupamento favorecer descrições genéricas (§14).
+- A camada de licitações abertas é rasa de propósito, e só um valor de `status`
+  filtra de verdade na API — os outros são aceitos e ignorados (§15).
 
 Cada uma está justificada em [DECISIONS.md](DECISIONS.md).
 

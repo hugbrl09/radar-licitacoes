@@ -12,21 +12,36 @@ import { fileURLToPath } from "node:url";
 const aqui = dirname(fileURLToPath(import.meta.url));
 // Qual UF vai para o site. Trocar de estado é trocar esta variável e reprocessar.
 const uf = (process.env.RADAR_UF ?? "to").toLowerCase();
-const origem = join(aqui, "..", "..", "ingestao", "dados", `analise-${uf}.json`);
-const destino = join(aqui, "..", "data", "analise.json");
+const dados = join(aqui, "..", "..", "ingestao", "dados");
+const destinoDir = join(aqui, "..", "data");
 
-if (!existsSync(origem)) {
-  // Não é erro fatal: quem clona o repositório recebe o data/analise.json
-  // versionado e consegue rodar o app sem ter rodado a ingestão.
-  if (existsSync(destino)) {
-    console.log("análise não encontrada no pipeline — mantendo a cópia existente");
-    process.exit(0);
+const arquivos = [
+  { origem: `analise-${uf}.json`, destino: "analise.json", obrigatorio: true },
+  { origem: `abertos-${uf}.json`, destino: "abertos.json", obrigatorio: false },
+];
+
+mkdirSync(destinoDir, { recursive: true });
+
+for (const { origem, destino, obrigatorio } of arquivos) {
+  const de = join(dados, origem);
+  const para = join(destinoDir, destino);
+
+  if (!existsSync(de)) {
+    // Não é erro fatal quando já existe cópia: quem clona o repositório recebe
+    // os JSON versionados e roda o app sem ter rodado a ingestão.
+    if (existsSync(para)) {
+      console.log(`${origem} não encontrado no pipeline — mantendo a cópia existente`);
+      continue;
+    }
+    if (!obrigatorio) {
+      console.log(`${origem} ausente (opcional) — seguindo sem ele`);
+      continue;
+    }
+    console.error(`não encontrado: ${de}`);
+    console.error("rode antes, em ingestao/: uv run python -m radar.analise");
+    process.exit(1);
   }
-  console.error(`análise não encontrada em ${origem}`);
-  console.error("rode antes: uv run python -m radar.analise (em ingestao/)");
-  process.exit(1);
-}
 
-mkdirSync(dirname(destino), { recursive: true });
-copyFileSync(origem, destino);
-console.log(`análise copiada para ${destino}`);
+  copyFileSync(de, para);
+  console.log(`${origem} -> data/${destino}`);
+}

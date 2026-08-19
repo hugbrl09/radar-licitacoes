@@ -327,6 +327,50 @@ preservando unicidade.
 
 ---
 
+## 15. Licitações abertas: a camada rasa, e por que ela é rasa
+
+**O que é.** Uma segunda leitura sobre a mesma fonte: *o que está aberto agora*,
+para quem vende ao governo. Ela para no nível da compra e não desce ao item.
+
+**Por que rasa, e por que isso não é preguiça.** A análise de preço custa ~4,4
+requisições por compra (uma para listar itens, mais uma por item com resultado).
+Fazer isso para uma lista que precisa ser *recente* e *ampla* seria pagar caro
+por profundidade que esta pergunta não usa: quem procura oportunidade quer saber
+o que abriu e quando fecha, não o preço unitário histórico. Largura e
+profundidade competem pelo mesmo orçamento de requisições, e cada camada escolhe
+seu lado.
+
+**Só um valor de `status` funciona.** `status=recebendo_proposta` filtra de
+verdade — 457 de 34.353 no Tocantins. Todos os outros valores testados, inclusive
+inventados (`abertas`, `encerrado`, `em_andamento`), são aceitos e **ignorados em
+silêncio**, devolvendo a base inteira. É a mesma armadilha do §9: o parâmetro não
+recusa, ele mente.
+
+**Credenciamento não é disputa com prazo.** Responde por 188 dos 457 editais
+abertos (41%) e fica aberto por meses ou anos — é cadastro permanente, não pregão
+com data para fechar. Misturá-lo numa lista ordenada por urgência criaria pressão
+falsa. Fica separado em aba própria e marcado, nunca escondido: quem procura
+credenciamento precisa achá-lo.
+
+**Prazo é calculado no navegador, não no build.** A página guarda a data absoluta
+de fechamento; o "encerra em 4 dias" é recalculado a cada visita. Gravar o número
+de dias no HTML estático produziria uma página que mente a partir do dia
+seguinte. A data da coleta aparece no topo, junto do aviso de que editais
+publicados depois dela não estão listados.
+
+**A incompletude vai no arquivo, não só no log.** A coleta grava quantos editais
+a API disse existir e quantos conseguiu ler. Se as duas contas divergirem, a
+interface diz "lista incompleta" com os dois números. Uma primeira execução leu
+348 de 450 — apresentar aquilo como se fosse tudo seria uma mentira silenciosa.
+
+**O link do portal foi verificado, não deduzido.** O caminho correto é
+`/app/compras/{cnpj}/{ano}/{seq}`. O palpite óbvio (`/app/editais/`) e o campo
+`item_url` que a própria busca devolve (`/compras/{cnpj}/{ano}/{seq}`) **não
+funcionam** — o segundo dá 404. Publicar link quebrado em ferramenta de
+oportunidade seria pior que não publicar link.
+
+---
+
 ## 11. Mediana e intervalo interquartil, não média e desvio padrão
 
 Preço de compra pública tem cauda longa: um contrato atípico distorce a média e o
