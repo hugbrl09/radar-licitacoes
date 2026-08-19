@@ -11,7 +11,13 @@ export default function Abertos() {
   const dados = carregarAbertos();
   if (!dados) notFound();
 
-  const coletado = new Date(dados.coletado_em);
+  // Fuso explícito: a data é formatada no servidor da Vercel, que roda em UTC.
+  // Sem isso o retrato apareceria três horas adiantado para quem lê no Brasil.
+  const coletado = new Date(dados.coletado_em).toLocaleString("pt-BR", {
+    dateStyle: "short",
+    timeStyle: "short",
+    timeZone: "America/Sao_Paulo",
+  });
 
   return (
     <>
@@ -31,8 +37,7 @@ export default function Abertos() {
                    text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
       >
         <p>
-          <strong className="font-medium">Retrato de{" "}
-          {coletado.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })}</strong>
+          <strong className="font-medium">Retrato de {coletado}</strong>
           . Os prazos abaixo são recalculados a cada visita, mas editais publicados
           depois dessa coleta não aparecem — confirme sempre no PNCP antes de agir.
         </p>
